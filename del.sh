@@ -1,4 +1,4 @@
-rm theme;
+rm -rf theme;
 rm *.html;
 rm -rf author;
 rm -rf category;
