@@ -254,6 +254,30 @@ Disallow: /.jpg$
 
 <p>而百度的分析就需要手动的在主题目录下的template目录下的base.html中增添百度的分析代码。</p>
 <p>4.sitemap是对于爬虫友好的一个文件，它高速爬虫，网站的更新频率和优先级等。<a href="http://baike.baidu.com/view/1072062.htm">详情</a></p>
+<p>增添插件：</p>
+<div class="highlight"><pre><span></span>git clone git://github.com/getpelican/pelican-plugins.git
+</pre></div>
+
+
+<p>修改pelicanconf.py文件：</p>
+<div class="highlight"><pre><span></span>PLUGIN_PATH = u&quot;pelican-plugins&quot;
+PLUGINS = [&quot;sitemap&quot;]
+SITEMAP = {
+    &quot;format&quot;: &quot;xml&quot;,
+    &quot;priorities&quot;: {
+        &quot;articles&quot;: 0.7,
+        &quot;indexes&quot;: 0.5,
+        &quot;pages&quot;: 0.3,
+    },
+    &quot;changefreqs&quot;: {
+        &quot;articles&quot;: &quot;monthly&quot;,
+        &quot;indexes&quot;: &quot;daily&quot;,
+        &quot;pages&quot;: &quot;monthly&quot;,
+    }
+}
+</pre></div>
+
+
 <p>5.favicon.ico
 放在output的根目录下。</p>
 <h2>参考</h2>
