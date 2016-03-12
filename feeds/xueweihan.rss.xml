@@ -444,7 +444,7 @@ SITEMAP = {
 &lt;p&gt;7.关于我
 这个就像相当于一个自我介绍的页面，所以就需要在&lt;code&gt;content&lt;/code&gt;目录下创建一个&lt;code&gt;pages&lt;/code&gt;目录，然后把你要展示的内容放到&lt;code&gt;pages&lt;/code&gt;目录下就可以了。&lt;/p&gt;
 &lt;h2&gt;最终效果&lt;/h2&gt;
-&lt;p&gt;我的博客：&lt;a href="xueweihan.com"&gt;xueweihan.com&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;我的博客：&lt;a href="http://xueweihan.com"&gt;xueweihan.com&lt;/a&gt;&lt;/p&gt;
 &lt;h2&gt;问题&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;
