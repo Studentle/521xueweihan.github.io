@@ -1,5 +1,736 @@
 <?xml version="1.0" encoding="utf-8"?>
-<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>削微寒</title><link>http://xueweihan.com/</link><description></description><atom:link href="http://xueweihan.com/feeds/xueweihan.rss.xml" rel="self"></atom:link><lastBuildDate>Mon, 29 Feb 2016 18:01:00 +0800</lastBuildDate><item><title>什么是真正的程序员</title><link>http://xueweihan.com/the-real-programer.html</link><description>&lt;blockquote&gt;
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>削微寒</title><link>http://xueweihan.com/</link><description></description><atom:link href="http://xueweihan.com/feeds/xueweihan.rss.xml" rel="self"></atom:link><lastBuildDate>Sat, 19 Mar 2016 22:01:00 +0800</lastBuildDate><item><title>python内建方法学习笔记</title><link>http://xueweihan.com/python-build-in-func.html</link><description>&lt;h1&gt;撸一遍python的内建方法&lt;/h1&gt;
+&lt;p&gt;这样做的好处就是：我如果要完成一个功能的时候，如果能用内建方法完成，就用内建方法。这样可以提高效率，同时使自己的代码更加优雅。哎呦？那岂不是撸完就是python高手了？我先帮大家试试效果，请静候我的反馈！&lt;/p&gt;
+&lt;p&gt;反馈：内建方法全部看完了，并敲完所有的内建方法，收获还是有的，但是发现不了解的知识更多了。内建方法属于python的标准库中的一章。python的标准库中还有很多值得一看的章节。&lt;a href="http://python.usyiyi.cn/python_278/library/index.html"&gt;python2.7.8中文标准库文档&lt;/a&gt;，这些内容我粗略的看了一遍。这个内建方法的学习笔记我周三就写完了，本来想在写内建类型的学习笔记。但是发现太多了！而且我发现，看的太多记下的东西就会变少，所以我打算把重心转移到我自己练手的项目中（现在还没什么值得分享的东西，等拿得出手肯定会告诉大家的）。我想把学习标准库中收获的技巧用到我的项目中，这样学以致用才能真正融汇贯通。这就是我的下一步学习计划：通过实际项目，运用python标准库中的技巧！&lt;/p&gt;
+&lt;p&gt;结论就是：看完标准库我还没有成为高手，但是我收获了很多知识，基础牢固了一些。下一步打算在我自己的项目中运用这些技巧，提高自己的能力和技术！&lt;/p&gt;
+&lt;p&gt;相关资料
+- &lt;a href="https://docs.python.org/2/library/functions.html#all" title="官方文档－英文"&gt;官方文档－内建方法(英文)－2.7.11&lt;/a&gt;
+- &lt;a href="http://python.usyiyi.cn/python_278/library/functions.html" title="官方文档－中文"&gt;官方文档－内建方法(中文)－2.7.8&lt;/a&gt;&lt;/p&gt;
+&lt;h2&gt;内建方法&lt;/h2&gt;
+&lt;table&gt;
+&lt;thead&gt;
+&lt;tr&gt;
+&lt;th&gt;常用内建方法&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th&gt;&lt;/th&gt;
+&lt;th align="left"&gt;&lt;/th&gt;
+&lt;/tr&gt;
+&lt;/thead&gt;
+&lt;tbody&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="#all"&gt;all&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="＃divmod"&gt;divmod&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#input"&gt;input&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#open"&gt;open&lt;/a&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;a href="#staticmethod"&gt;staticmethod&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="#abs"&gt;abs&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#enumerate"&gt;enumerate&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#int"&gt;int&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#ord"&gt;ord&lt;/a&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;a href="#str"&gt;str&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="#any"&gt;any&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#eval"&gt;eval&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#isinstance"&gt;isinstance&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#pow"&gt;pow&lt;/a&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;a href="#sum"&gt;sum&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="#basestring"&gt;basestring&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#execfile"&gt;execfile&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#issubclass"&gt;issubclass&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#print"&gt;print&lt;/a&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;a href="#super"&gt;super&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="#bin"&gt;bin&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#file"&gt;file&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#iter"&gt;iter&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#property"&gt;property&lt;/a&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;a href="#tuple"&gt;tuple&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="#bool"&gt;bool&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#filter"&gt;filter&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#len"&gt;len&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#range"&gt;range&lt;/a&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;a href="#type"&gt;type&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="#bytearray"&gt;bytearray&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#float"&gt;float&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#list"&gt;list&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#raw_input"&gt;raw_input&lt;/a&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;a href="#unichr"&gt;unichr&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="#callable"&gt;callable&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#format"&gt;format&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#locals"&gt;locals&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#reduce"&gt;reduce&lt;/a&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;a href="#unicode"&gt;unicode&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="#chr"&gt;chr&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#frozenset"&gt;frozenset&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#long"&gt;long&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#reload"&gt;reload&lt;/a&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;a href="#vars"&gt;vars&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="#classmethod"&gt;classmethod&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#getattr"&gt;getattr&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#map"&gt;map&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#repr"&gt;repr&lt;/a&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;a href="#xrange"&gt;xrange&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="#cmp"&gt;cmp&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#globals"&gt;globals&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#max"&gt;max&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#reversed"&gt;reversed&lt;/a&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;a href="#zip"&gt;zip&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="#compile"&gt;compile&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#hasattr"&gt;hasattr&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#memoryview"&gt;memoryview&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#round"&gt;round&lt;/a&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;a href="#__import__"&gt;&lt;strong&gt;import&lt;/strong&gt;&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="#complex"&gt;complex&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#hash"&gt;hash&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#min"&gt;min&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#set"&gt;set&lt;/a&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;a href="#apply"&gt;apply&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="#delattr"&gt;delattr&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#help"&gt;help&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#next"&gt;next&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#setattr"&gt;setattr&lt;/a&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;a href="#buffer"&gt;buffer&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="#dict"&gt;dict&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#hex"&gt;hex&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#object"&gt;object&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#slice"&gt;slice&lt;/a&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;a href="#coerce"&gt;coerce&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;tr&gt;
+&lt;td&gt;&lt;a href="#dir"&gt;dir&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#id"&gt;id&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#oct"&gt;oct&lt;/a&gt;&lt;/td&gt;
+&lt;td&gt;&lt;a href="#sorted"&gt;sorted&lt;/a&gt;&lt;/td&gt;
+&lt;td align="left"&gt;&lt;a href="#intern"&gt;intern&lt;/a&gt;&lt;/td&gt;
+&lt;/tr&gt;
+&lt;/tbody&gt;
+&lt;/table&gt;
+&lt;p&gt;&lt;strong&gt;说明&lt;/strong&gt;:&lt;code&gt;[,xxx]&lt;/code&gt;表示为可选参数。&lt;/p&gt;
+&lt;p&gt;&lt;span id="abs"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h4&gt;abs(x)&lt;/h4&gt;
+&lt;p&gt;返回x的绝对值，例如：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;abs&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;-&lt;/span&gt;&lt;span class="mf"&gt;1.23&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# 1.23&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="all"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h4&gt;all(iterable)&lt;/h4&gt;
+&lt;p&gt;如果iterable(迭代对象)的所有元素为真（或者iterable为空：[],'',()等），返回True。例如：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;all&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# True&lt;/span&gt;
+&lt;span class="nb"&gt;all&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="c1"&gt;# False&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="any"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h4&gt;any(iterable)&lt;/h4&gt;
+&lt;p&gt;如果iterable中只要又一个元素为真，就返回True。例如：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;any&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt; &lt;span class="c1"&gt;# True&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="basestring"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h4&gt;basestring()&lt;/h4&gt;
+&lt;p&gt;它是str和unicode的超类，不能被调用或者实例化。只能用来测试一个对象是不是str或unicode的实例。例如：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;u&amp;#39;a&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;b&amp;#39;&lt;/span&gt;
+&lt;span class="nb"&gt;isinstance&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;basestring&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# True&lt;/span&gt;
+&lt;span class="nb"&gt;isinstance&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;basestring&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# True&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="bin"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h4&gt;bin()&lt;/h4&gt;
+&lt;p&gt;将&lt;strong&gt;整数&lt;/strong&gt;转成二进制&lt;strong&gt;字符串&lt;/strong&gt;。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;bin&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# &amp;#39;0b11&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="bool"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h4&gt;bool()&lt;/h4&gt;
+&lt;p&gt;将一个值转化成布尔值。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;bool&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# True&lt;/span&gt;
+&lt;span class="nb"&gt;bool&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# True&lt;/span&gt;
+&lt;span class="nb"&gt;bool&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# False&lt;/span&gt;
+&lt;span class="nb"&gt;bool&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39; &amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# True&lt;/span&gt;
+&lt;span class="nb"&gt;bool&lt;/span&gt;&lt;span class="p"&gt;([])&lt;/span&gt; &lt;span class="c1"&gt;# False&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="bytearray"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h4&gt;bytearray()&lt;/h4&gt;
+&lt;p&gt;结合memoryview，实现改变str类型对象的值。请移步&lt;a href="http://python.usyiyi.cn/python_278/library/stdtypes.html#memoryview-type"&gt;python内建类型&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span id="callable"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h4&gt;callable(object)&lt;/h4&gt;
+&lt;p&gt;如果object参数可调用，返回True；否则返回False。对类的调用，返回一个新的实例。对于实例，如果实例有&lt;strong&gt;call&lt;/strong&gt;方法，则该实例也是可以调用的。例如：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;TestCallable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;object&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;pass&lt;/span&gt;
+
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;__call__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;pass&lt;/span&gt;
+
+&lt;span class="nb"&gt;callable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TestCallable&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# True&lt;/span&gt;
+&lt;span class="nb"&gt;callable&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TestCallable&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt; &lt;span class="c1"&gt;# True&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="chr"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h4&gt;chr(i)&lt;/h4&gt;
+&lt;p&gt;返回一个字符，该字符的&lt;a href="http://www.asciitable.com/" title="ASCII表"&gt;ASCII&lt;/a&gt;码为整数i。i的取值范围：0 &amp;lt;= x &amp;lt; 255&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;chr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;100&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# &amp;#39;d&amp;#39;&lt;/span&gt;
+&lt;span class="nb"&gt;ord&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;d&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# 100&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="classmethod"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h4&gt;classmethod(functions)&lt;/h4&gt;
+&lt;p&gt;将传入的方法包装成类方法（类方法是指，类不需要实力化就可以直接调用的方法）。
+类方法的第一个参数必须为类（约定俗称用cls代表），实例方法的第一个参数必须为实例（约定俗称为self），这两种接收参数的方法叫做：隐式第一参数（implicit first argument）。静态方法（通过@staticmethod装饰的方法)不需要如上述两个方法的隐式参数。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;C&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;object&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="nd"&gt;@classmethod&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;cls&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;arg1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;arg2&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;pass&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;注意：通过@classmethod修饰的方法，为类方法。类可以直接调用（如C.f())；实例也可以直接调用（如C().f())，切记类方法中不能操作实例的属性。如果子类调用类方法，子类对象被传递为隐式的第一个参数（也就是cls为子类对象）。&lt;/p&gt;
+&lt;p&gt;&lt;span id="cmp"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h4&gt;cmp(x, y)&lt;/h4&gt;
+&lt;p&gt;比较两个对象x和y，当&lt;code&gt;x &amp;lt; y&lt;/code&gt;返回'-1'；&lt;code&gt;x &amp;gt; y&lt;/code&gt;返回'1';&lt;code&gt;x == y&lt;/code&gt;返回0&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;cmo&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# -1&lt;/span&gt;
+&lt;span class="nb"&gt;cmp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# 1&lt;/span&gt;
+&lt;span class="nb"&gt;cmp&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# 0&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;注意：&lt;code&gt;bool(-1)&lt;/code&gt;结果为True&lt;/p&gt;
+&lt;p&gt;&lt;span id="compile"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h4&gt;compile(source, filename, mode)&lt;/h4&gt;
+&lt;p&gt;compile可以将字符串或者Unicode字符串编译成代码对象。代码对象可以通过&lt;code&gt;exec&lt;/code&gt;或&lt;code&gt;eval&lt;/code&gt;执行。
+- 参数source：字符串或者AST（Abstract Syntax Trees）对象。
+- 参数 filename：代码文件名称，如果不是从文件读取代码则传递一些可辨认的值。
+- 参数model：指定编译代码的种类。可以指定为 ‘exec’,’eval’,’single’。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;source&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;if cmp(1, 1)==0: print &amp;#39;yes&amp;#39;&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;test_compile&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;source&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;exec&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;exec&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;test_compile&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;#yes&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;注意：source是字符串，要注意引号和双引号，最后指定什么model，就用那种方法执行。compile返回的类型是&lt;code&gt;code&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;span id="complex"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h4&gt;complex(str)&lt;/h4&gt;
+&lt;p&gt;创建一个复数。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;complex&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;1+2j&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;#可行&lt;/span&gt;
+&lt;span class="nb"&gt;complex&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;1 + 2j&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;#报错(因为字符串中&amp;#39;+&amp;#39;或者&amp;#39;-&amp;#39;两遍不能有空白)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="delattr"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h4&gt;delattr(object, name)&lt;/h4&gt;
+&lt;p&gt;参数是一个对象和一个字符串(&lt;code&gt;name&lt;/code&gt;为字符串类型)，字符串必须是该对象的某个属性名。效果是：删除该对象的name对应的属性。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Test&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;object&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;XueWeiHan&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;test_delatter&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Test&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;test_delatter&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="c1"&gt;# XueWeiHan&lt;/span&gt;
+&lt;span class="nb"&gt;delattr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;test_delatter&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;name&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;test_delatter&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="c1"&gt;# 报错，没有name属性，删除成功&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="dict"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h4&gt;dict()&lt;/h4&gt;
+&lt;p&gt;创建一个新字典。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;# {&amp;#39;a&amp;#39;: 1}&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="dir"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;dir(object)&lt;/h3&gt;
+&lt;p&gt;如果没有参数，返回当前本地作用域的名字列表。如果有参数，返回该参数的属性列表(属性和方法)。
+如果类中定义了__dir__方法，则&lt;code&gt;dir()&lt;/code&gt;会先默认从__dict__属性中收集信息。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;time&lt;/span&gt;
+&lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# model&lt;/span&gt;
+&lt;span class="nb"&gt;dir&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;time&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;   &lt;span class="c1"&gt;# [&amp;#39;__doc__&amp;#39;,&amp;#39;__file__&amp;#39;,...,&amp;#39;sleep&amp;#39;,&amp;#39;strftime&amp;#39;,]就是time.可以调用的属性和方法&lt;/span&gt;
+&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;TestDir&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;object&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;__dir__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;TestDir1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;TestDir2&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="nb"&gt;dir&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;TestDir&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# [&amp;#39;TestDir1&amp;#39;, &amp;#39;TestDir2&amp;#39;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;注意：dir()主要是方便交互环境&lt;/p&gt;
+&lt;p&gt;&lt;span id="divmod"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;divmod(a, b)&lt;/h3&gt;
+&lt;p&gt;效果：a除以b，返回商和余数的二元组（两个数组成的元组）&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;divmod&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;#(2, 1)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="enumerate"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;enumerate(sequence, start=0)&lt;/h3&gt;
+&lt;p&gt;返回一个枚举对象。sequence必须是序列，迭代器iterator，或者支持迭代的对象：&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;迭代器Iterators:
+迭代器仅是一容器对象，它实现了迭代器协议。它有两个基本方法：
+1）next方法
+返回容器的下一个元素
+2）__iter__方法
+返回迭代器自身&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;names&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Xuweihan&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;James&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Kobe&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;enumerate_data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;names&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;start&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;#这是个枚举类型数据&lt;/span&gt;
+&lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;enumerate_data&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;#[(0, &amp;#39;Xuweihan&amp;#39;), (1, &amp;#39;James&amp;#39;), (2, &amp;#39;Kobe&amp;#39;)]&lt;/span&gt;
+
+&lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;enumerate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;names&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;  &lt;span class="c1"&gt;#[(1, &amp;#39;Xuweihan&amp;#39;), (2, &amp;#39;James&amp;#39;), (3, &amp;#39;Kobe&amp;#39;)]&lt;/span&gt;
+
+&lt;span class="c1"&gt;# 实现&lt;/span&gt;
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;enumerate&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;sequence&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;start&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="n"&gt;start&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;elem&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="n"&gt;sequence&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;yield&lt;/span&gt; &lt;span class="n"&gt;n&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;elem&lt;/span&gt;
+        &lt;span class="n"&gt;n&lt;/span&gt; &lt;span class="o"&gt;+=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：enumerate是生成器，惰性计算。可以调用next()&lt;/p&gt;
+&lt;p&gt;&lt;span id="eval"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;eval(expression[,globals()[,locals()]])&lt;/h3&gt;
+&lt;p&gt;expression参数被当作python表达式执行。使用&lt;code&gt;globals()&lt;/code&gt;和&lt;code&gt;locals()&lt;/code&gt;指定执行的代码中变量是全局变量还是本地变量。代码例子如下：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;  &lt;span class="c1"&gt;#全局变量&lt;/span&gt;
+
+&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;add_one&lt;/span&gt;&lt;span class="p"&gt;():&lt;/span&gt;
+    &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;  &lt;span class="c1"&gt;#本地变量&lt;/span&gt;
+    &lt;span class="nb"&gt;eval&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;a+1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;globals&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;  &lt;span class="c1"&gt;#结果为 2&lt;/span&gt;
+    &lt;span class="nb"&gt;eval&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;a+1&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;locals&lt;/span&gt;&lt;span class="p"&gt;())&lt;/span&gt;  &lt;span class="c1"&gt;#结果为 3&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="execfile"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;execfile(filename[,globals[,locals]])&lt;/h3&gt;
+&lt;p&gt;该函数类似exec（上面的那个），不同的是他解析一个&lt;strong&gt;文件&lt;/strong&gt;，而不是字符串。它不同与__import__语句的地方在于，它不使用模块管理——它无条件的读入文件且不会创建一个新模块。
+(&lt;strong&gt;不常用&lt;/strong&gt;)&lt;/p&gt;
+&lt;p&gt;&lt;span id="file"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;file()&lt;/h3&gt;
+&lt;p&gt;file类型的构造函数。打开一个文件的时候，建议使用&lt;a href="#open"&gt;open()&lt;/a&gt;而不使用&lt;code&gt;file()&lt;/code&gt;。&lt;code&gt;file&lt;/code&gt;更适合类型检测例如：&lt;code&gt;isinstance(f, file)&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;span id="filter"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;filter(functions, iterable)&lt;/h3&gt;
+&lt;p&gt;构造一个列表，列表的元素来自于iterable，返回对于这些元素function返回&lt;code&gt;True&lt;/code&gt;的元素。iterable可以是个序列，支持迭代的容器或者一个迭代器。
+filter函数相当于过滤，返回符合functions的列表中的元素。带判断的列表生成式:&lt;code&gt;[i for i in list if i]&lt;/code&gt;&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;test_list&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;python&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;ruby&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;node.js&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;result&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;filter&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;==&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;python&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="n"&gt;test_list&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="err"&gt;＃结果：&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;python&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="float"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;float()&lt;/h3&gt;
+&lt;p&gt;将字符串或者数字转化成浮点数。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;.3333&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;#0.3333&lt;/span&gt;
+&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;a.333&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;#报错&lt;/span&gt;
+&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;#1.0&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="format"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;format(value[,format_spec])&lt;/h3&gt;
+&lt;p&gt;将value转化成“格式化”的表现形式，格式由&lt;code&gt;format_spec&lt;/code&gt;控制。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;_string&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;{name} is a pythoner&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;format&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;Xueweihan&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="n"&gt;_string&lt;/span&gt;  &lt;span class="c1"&gt;# &amp;#39;Xueweihan is a pythoner&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="frozenset"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;frozenset()&lt;/h3&gt;
+&lt;p&gt;返回一个新的forzenset对象。就是一个不可变的集合，所以存在哈希值，可以作为字典的key。
+&lt;strong&gt;注意&lt;/strong&gt;：python的集合类型不支持整数。&lt;/p&gt;
+&lt;p&gt;&lt;span id="getattr"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;getattr(object, name[,default])&lt;/h3&gt;
+&lt;p&gt;返回object的属性值。name必须是个字符串。如果名字指明的属性不存在，则返回default参数。&lt;/p&gt;
+&lt;p&gt;例如：&lt;code&gt;getattr(x, 'test')&lt;/code&gt;等于x.test。&lt;/p&gt;
+&lt;p&gt;&lt;span id="globals"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;globals()&lt;/h3&gt;
+&lt;p&gt;&lt;code&gt;globals(x)&lt;/code&gt;，x成为全局变量。&lt;/p&gt;
+&lt;p&gt;&lt;span id="hasattr"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;hasattr(object, name)&lt;/h3&gt;
+&lt;p&gt;参数是一个对象和一个字符串。如果对象含有该属性则返回True；否则返回False。&lt;/p&gt;
+&lt;p&gt;&lt;span id="hash"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;hash(object)&lt;/h3&gt;
+&lt;p&gt;返回对象的hash值。hash值是整数，它被用于字典查找时快速比较字典的键。相同的数值有相同的hash（例如：1和1.0的hash值相同）&lt;/p&gt;
+&lt;p&gt;&lt;span id="help"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;help([object])&lt;/h3&gt;
+&lt;p&gt;调用帮助系统（主要用于交互式的使用过程中）。如果没有指定object的话，则进入交互式的help帮助系统。&lt;/p&gt;
+&lt;p&gt;&lt;span id="hex"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;hex()&lt;/h3&gt;
+&lt;p&gt;将number类型的数据，转化成“0x”打头小写的十六进制字符串：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;hex&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;33&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;#&amp;#39;-0x21&amp;#39;&lt;/span&gt;
+
+&lt;span class="c1"&gt;#float类型数据&lt;/span&gt;
+&lt;span class="nb"&gt;float&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;hex&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;0.32&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;#&amp;#39;0x1.47ae147ae147bp-2&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="id"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;id(object)&lt;/h3&gt;
+&lt;p&gt;返回对象的“表示”，这是一个整数，在对象的生命期内&lt;strong&gt;唯一且不变&lt;/strong&gt;。&lt;br /&gt;
+&lt;strong&gt;注意&lt;/strong&gt;：CPython中：id就是对象的内存地址。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;id&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;33&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# 140300932661128&lt;/span&gt;
+
+&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;33&lt;/span&gt;
+&lt;span class="nb"&gt;id&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# 140300932661128&lt;/span&gt;
+
+&lt;span class="n"&gt;b&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;33&lt;/span&gt;
+&lt;span class="nb"&gt;id&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;b&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;# 140300932661128&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="input"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;input()&lt;/h3&gt;
+&lt;p&gt;获取用户的输入。&lt;/p&gt;
+&lt;p&gt;建议用：raw_input&lt;/p&gt;
+&lt;p&gt;&lt;span id="int"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;int(x, base=10)&lt;/h3&gt;
+&lt;p&gt;将数字或字符串x转化成一个整数，如果没有参数则返回0。&lt;/p&gt;
+&lt;p&gt;&lt;span id="isinstance"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;isinstance(object, classinfo)&lt;/h3&gt;
+&lt;p&gt;如果参数object是参数classinfo的一个实例；或者是一个子类的实例，最终返回真。&lt;/p&gt;
+&lt;p&gt;推荐使用这个而不是用type进行判断。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;isinstance&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="nb"&gt;int&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;#True&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="issubclass"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;issubclass(class, classinfo)&lt;/h3&gt;
+&lt;p&gt;如果class是classinfo的子类，则返回真。&lt;/p&gt;
+&lt;p&gt;&lt;span id="iter"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;iter(o[,sentinel])&lt;/h3&gt;
+&lt;p&gt;返回一个iterator(迭代器)对象。如果没有第二个参数，o必须是个集合独享，要么支持迭代协议&lt;a href="#enumerate"&gt;参考&lt;/a&gt;，要么支持序列协议。例如：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt;
+    &lt;span class="k"&gt;pass&lt;/span&gt;
+
+&lt;span class="c1"&gt;#等同于&lt;/span&gt;
+&lt;span class="n"&gt;it&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;iter&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+
+&lt;span class="k"&gt;while&lt;/span&gt; &lt;span class="bp"&gt;True&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;try&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;next&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;it&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;except&lt;/span&gt; &lt;span class="ne"&gt;StopIteration&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="k"&gt;break&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;如果有第二个参数sentinel，o必须是个可调用对象。使用场景：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# 读取一个文件的行，直到读到特定行&lt;/span&gt;
+&lt;span class="k"&gt;with&lt;/span&gt; &lt;span class="nb"&gt;open&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;test.txt&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="k"&gt;as&lt;/span&gt; &lt;span class="n"&gt;fp&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;for&lt;/span&gt; &lt;span class="n"&gt;line&lt;/span&gt; &lt;span class="ow"&gt;in&lt;/span&gt; &lt;span class="nb"&gt;iter&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;fp&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;readline&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="n"&gt;process_line&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;line&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="len"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;len(s)&lt;/h3&gt;
+&lt;p&gt;返回对象的长度（元素的个数）。s可以是：序列或者集合。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;len&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;xueweihan&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;#9&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="list"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;list([iterable])&lt;/h3&gt;
+&lt;p&gt;返回一个列表，其中的元素来自于iterable。iterable可以是个序列，支持迭代的容器，或者迭代器对象。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;xueweihan&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;#[&amp;#39;x&amp;#39;, &amp;#39;u&amp;#39;, &amp;#39;e&amp;#39;, &amp;#39;w&amp;#39;, &amp;#39;e&amp;#39;, &amp;#39;i&amp;#39;, &amp;#39;h&amp;#39;, &amp;#39;a&amp;#39;, &amp;#39;n&amp;#39;]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="locals"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;locals()&lt;/h3&gt;
+&lt;p&gt;把传入的变量，修饰成局部变量。&lt;/p&gt;
+&lt;p&gt;&lt;span id="long"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;long()&lt;/h3&gt;
+&lt;p&gt;将一个字符串或者数字传化成一个长整数。&lt;/p&gt;
+&lt;p&gt;&lt;span id="map"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;map()&lt;/h3&gt;
+&lt;p&gt;遍历iterable的每个元素，并把元素作为参数传入function，返回结果的列表。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;add_two&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;num&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;
+&lt;span class="n"&gt;num_list&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="nb"&gt;map&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;add_two&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;num_list&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="c1"&gt;#[3,4,5,6,7]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="max"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;max()&lt;/h3&gt;
+&lt;p&gt;返回可迭代的对象中最大的元素。&lt;/p&gt;
+&lt;p&gt;&lt;span id="memoryview"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;memoryview()&lt;/h3&gt;
+&lt;p&gt;返回memoryview对象，它允许Python代码访问对象的内部数据而不用复制，只要该对象支持缓冲区协议。
+如有疑问请参考&lt;a href="http://python.usyiyi.cn/python_278/library/stdtypes.html#memoryview-type"&gt;python内建类型memoryview&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span id="min"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;min()&lt;/h3&gt;
+&lt;p&gt;返回可迭代的对象中的最小的元素。&lt;/p&gt;
+&lt;p&gt;&lt;span id="next"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;next(iterator[,default])&lt;/h3&gt;
+&lt;p&gt;通过调用iterator(迭代器)的next()方法，得到它的下一个元素。如果有default参数，在迭代器迭代完之后返回该参数；否则抛出StopIteration。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;test_next_data&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;iter&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="nb"&gt;next&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;test_next_data&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Done&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;#1&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="nb"&gt;next&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;test_next_data&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Done&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;#2&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="nb"&gt;next&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;test_next_data&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Done&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;#3&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="nb"&gt;next&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;test_next_data&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;Done&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;#Done&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;:通过&lt;code&gt;iter()&lt;/code&gt;返回的就是迭代器。&lt;/p&gt;
+&lt;p&gt;&lt;span id="object"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;object()&lt;/h3&gt;
+&lt;p&gt;object是所有新式类的基类&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;A&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;object&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;pass&lt;/span&gt;
+&lt;span class="c1"&gt;#继承于object的类为新式类&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="oct"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;oct()&lt;/h3&gt;
+&lt;p&gt;将任意一个整数转成一个八进制字符串。&lt;/p&gt;
+&lt;p&gt;&lt;span id="open"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;open(name, [,mode[,buffering]])&lt;/h3&gt;
+&lt;p&gt;打开文件的方法，返回一个file类型对象。如果文件不能打开抛出IOError。&lt;br /&gt;
+mode：用什么方式打开文件。'r'读文件；'w'写文件；'a'附加。如果没有mode，默认是'r'。
+buffering: 缓冲&lt;/p&gt;
+&lt;p&gt;&lt;span id="ord"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;ord()&lt;/h3&gt;
+&lt;p&gt;参考：&lt;a href="#chr"&gt;chr()&lt;/a&gt;&lt;/p&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;:如果是unicode,则返回unicode码&lt;/p&gt;
+&lt;p&gt;&lt;span id="pow"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;pow(x, y[,z])&lt;/h3&gt;
+&lt;p&gt;返回x的y次幂：&lt;code&gt;x**y&lt;/code&gt;&lt;br /&gt;
+如果有z参数：&lt;code&gt;(x**y) % z&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span id="print"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;print()&lt;/h3&gt;
+&lt;p&gt;这个方法可以输出内容到file对象。&lt;br /&gt;
+&lt;strong&gt;注意&lt;/strong&gt;:不常用，为了使print语句失效，而是用print()函数。（print和print()不是一个东西）可以在你的模块上面使用future语句：&lt;code&gt;from __future__ import print_function&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span id="property"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;property()&lt;/h3&gt;
+&lt;p&gt;property其实就是个控制属性的权限的方法。同时实现，经property装饰的方法，可通过&lt;code&gt;Object.xxx&lt;/code&gt;调用属性，把实例方法，变成实例的属性。这样做的好处是：可以在方法中实现限制条件，同时限制可执行的操作。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Student&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;object&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="bp"&gt;None&lt;/span&gt;
+    &lt;span class="nd"&gt;@property&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;name&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_name&lt;/span&gt;
+    &lt;span class="nd"&gt;@name.setter&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;name&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt; &lt;span class="o"&gt;!=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;xueweihan&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+        &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;value&lt;/span&gt;
+    &lt;span class="nd"&gt;@name.deleter&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;name&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;del name!&amp;#39;&lt;/span&gt;
+        &lt;span class="k"&gt;del&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;_name&lt;/span&gt;
+&lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;Student&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;aaa&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;  &lt;span class="c1"&gt;#赋值成功&amp;#39;aaa&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;xueweihan&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;  &lt;span class="c1"&gt;#赋值失败&amp;#39;aaa&amp;#39;&lt;/span&gt;
+&lt;span class="k"&gt;del&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;  &lt;span class="c1"&gt;#‘del name!’&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;:@property可以控制属性，比如只读属性：不实现@xxx.setter和@xxx.deleter就可以了。&lt;/p&gt;
+&lt;p&gt;&lt;span id="range"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;range(start, stop[,step])&lt;/h3&gt;
+&lt;p&gt;用于创建列表，‘要头不要尾’。setp参数为步长&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;#[0, 1, 2, 3, 4]&lt;/span&gt;
+&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;#[2, 3]&lt;/span&gt;
+&lt;span class="nb"&gt;range&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;20&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;#[10, 15]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="raw_input"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;raw_input()&lt;/h3&gt;
+&lt;p&gt;获取控制台的输入&lt;/p&gt;
+&lt;p&gt;&lt;span id="reduce"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;reduce(function,iterable[,initializer])&lt;/h3&gt;
+&lt;p&gt;将带有两个参数的function累计地应用到iterable的元素上，从左向右。如果提供可选的参数initializer，它在计算时放在可迭代序列的最前面，并且当可迭代序列为空时作为默认值。例如：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;reduce&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="o"&gt;+&lt;/span&gt;&lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;
+&lt;span class="c1"&gt;#相当于计算(((1+2)+3)+4)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="reload"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;reload(module)&lt;/h3&gt;
+&lt;p&gt;如果你重新修改了模块，并且不打算停止重新启动python解释器的情况下使用该模块的最新版本。那么就使用&lt;code&gt;reload()&lt;/code&gt;，在reload之前就&lt;strong&gt;需要确保import过&lt;/strong&gt;。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="c1"&gt;# test_reload.py&lt;/span&gt;
+&lt;span class="k"&gt;print&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;test_reload&lt;/span&gt;  &lt;span class="c1"&gt;#&amp;#39;a&amp;#39;&lt;/span&gt;
+&lt;span class="c1"&gt;#修改test_reload.py ——&amp;gt; print &amp;#39;b&amp;#39;&lt;/span&gt;
+
+&lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="nn"&gt;test_reload&lt;/span&gt;  &lt;span class="c1"&gt;#什么都输出，因为没有之前已经import过了，所以没有重新加载&lt;/span&gt;
+
+&lt;span class="nb"&gt;reload&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;test_reload&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;#&amp;#39;b&amp;#39;重新加载成功！&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="repr"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;repr(object)&lt;/h3&gt;
+&lt;p&gt;精准的返回某个对象可打印形式的字符串。返回的值，可以通过eval()执行。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;repr&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;a&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;#&amp;quot;&amp;#39;a&amp;#39;&amp;quot;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="reversed"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;reversed(seq)&lt;/h3&gt;
+&lt;p&gt;返回一个反向的&lt;strong&gt;迭代器&lt;/strong&gt;。seq必须是一个具有__reversed__()方法或支持序列协议的对象（实现__len__()和__getitem__()方法）。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;test_reverse&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;reversed&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;  &lt;span class="c1"&gt;#&amp;lt;listreverseiterator object at 0x10bcab810&amp;gt;&lt;/span&gt;
+&lt;span class="n"&gt;test_reverse&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;next&lt;/span&gt;   &lt;span class="c1"&gt;#4&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;:可以编写一个定制的__reversed__()方法的可能。&lt;/p&gt;
+&lt;p&gt;&lt;span id="round"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;round(number[, ndigits])&lt;/h3&gt;
+&lt;p&gt;返回一个浮点数的近似值，保留小数点后&lt;code&gt;ndigits&lt;/code&gt;位，默认&lt;code&gt;ndigits&lt;/code&gt;为零。这个方法不好用，因为近似值不是&lt;strong&gt;四舍五入&lt;/strong&gt;。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;round&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mf"&gt;2.675&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;#2.67&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="set"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;set([iterable])&lt;/h3&gt;
+&lt;p&gt;返回一个集合对象，iterable是可迭代的对象。&lt;/p&gt;
+&lt;p&gt;&lt;span id="setattr"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;setattr(object,name,value)&lt;/h3&gt;
+&lt;p&gt;给object的属性赋值，可以是存在的属性，也可以是不存的属性。例如：&lt;code&gt;setattr(s, 'name','xueweihan')&lt;/code&gt;等同于&lt;code&gt;s.name='xueweihan'&lt;/code&gt;&lt;/p&gt;
+&lt;p&gt;&lt;span id="slice"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;slice()&lt;/h3&gt;
+&lt;p&gt;常用的切片方法：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;  &lt;span class="c1"&gt;#2&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="sorted"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;sorted(iterable[,cmp[,key[,reverse]]])&lt;/h3&gt;
+&lt;p&gt;用于iterable对象排序的方法。
+- cmp指定一个自定义的带有两个参数的比较函数（可迭代的元素），它应该根据第一个参数是小于、等于还是大于第二个参数返回负数、零或者正数：cmp=lambda x,y: cmp(x.lower(), y.lower())。默认值是None。
+- key指定一个带有一个参数的函数，它用于从每个列表元素选择一个比较的关键字：key=str.lower。默认值是None（直接比较元素）。
+- reverse是一个布尔值。如果设置为True，那么列表元素以反向比较排序。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Student&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;__init__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;grade&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;age&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;name&lt;/span&gt;
+            &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;grade&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;grade&lt;/span&gt;
+            &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;age&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;age&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;__repr__&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+            &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="nb"&gt;repr&lt;/span&gt;&lt;span class="p"&gt;((&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;name&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;grade&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;age&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;
+
+&lt;span class="n"&gt;student_objects&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;
+    &lt;span class="n"&gt;Student&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;john&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;A&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;15&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="n"&gt;Student&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;jane&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;B&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;12&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+    &lt;span class="n"&gt;Student&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;dave&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s1"&gt;&amp;#39;B&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;10&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="nb"&gt;sorted&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;student_objects&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;key&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="k"&gt;lambda&lt;/span&gt; &lt;span class="n"&gt;student&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt; &lt;span class="n"&gt;student&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;age&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;   &lt;span class="c1"&gt;# sort by age&lt;/span&gt;
+&lt;span class="c1"&gt;#结果为：[(&amp;#39;dave&amp;#39;, &amp;#39;B&amp;#39;, 10), (&amp;#39;jane&amp;#39;, &amp;#39;B&amp;#39;, 12), (&amp;#39;john&amp;#39;, &amp;#39;A&amp;#39;, 15)]&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="staticmethod"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;staticmethod(function)&lt;/h3&gt;
+&lt;p&gt;返回一个静态方法。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;C&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;object&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="nd"&gt;@staticmethod&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;f&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;arg1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;arg2&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="k"&gt;pass&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;:静态方法基可以在类上调用&lt;code&gt;C.f()&lt;/code&gt;，也可以在实例上调用&lt;code&gt;C().f()&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;span id="str"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;str(object='')&lt;/h3&gt;
+&lt;p&gt;返回一个字符串，包含对象的友好可打印表达形式。&lt;br /&gt;
+&lt;strong&gt;注意&lt;/strong&gt;:&lt;code&gt;print&lt;/code&gt;调用的就是对象的__str__方法&lt;/p&gt;
+&lt;p&gt;&lt;span id="sum"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;sum(iterable[,start])&lt;/h3&gt;
+&lt;p&gt;将iterable的元素从左向右相加并返回总和。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="nb"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;])&lt;/span&gt;  &lt;span class="c1"&gt;#6&lt;/span&gt;
+&lt;span class="nb"&gt;sum&lt;/span&gt;&lt;span class="p"&gt;([&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;],&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;#8&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="super"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;super()&lt;/h3&gt;
+&lt;p&gt;用于显性的指定父类的方法。同时实现方法的绑定。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;C&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;B&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;method&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;arg&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+        &lt;span class="nb"&gt;super&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;C&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="bp"&gt;self&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;method&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;arg&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;#C的父类实例的method()&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="tuple"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;tuple([iterable])&lt;/h3&gt;
+&lt;p&gt;返回一个元素，元素顺序和iterable的元素相同。&lt;/p&gt;
+&lt;p&gt;&lt;span id="tpye"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;type(object)&lt;/h3&gt;
+&lt;p&gt;返回object的类型。&lt;/p&gt;
+&lt;p&gt;type(name, bases, dict)&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;X&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;object&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="n"&gt;a&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;1&lt;/span&gt;
+
+&lt;span class="n"&gt;X&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;type&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;X&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;object&lt;/span&gt;&lt;span class="p"&gt;,),&lt;/span&gt; &lt;span class="nb"&gt;dict&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;a&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;))&lt;/span&gt;  &lt;span class="c1"&gt;# 当传入三个参数时，返回一个新的类型对象。&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="unichr"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;unichr(i)&lt;/h3&gt;
+&lt;p&gt;返回Unicode类型数据i的Unicode码。例如：&lt;code&gt;unichr(97)&lt;/code&gt;返回字符串&lt;code&gt;u'a'&lt;/code&gt;。&lt;/p&gt;
+&lt;p&gt;&lt;span id="unicode"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;unicode(object='')&lt;/h3&gt;
+&lt;p&gt;返回object的Unicode版字符串&lt;/p&gt;
+&lt;p&gt;&lt;span id="vars"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;vars([object])&lt;/h3&gt;
+&lt;p&gt;返回模块，类，实例或者其他任何具有__dict__属性的对象的__dict__属性。(key:value形式的__dict__属性)&lt;/p&gt;
+&lt;p&gt;&lt;span id="xrange"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;xrange(x)&lt;/h3&gt;
+&lt;p&gt;和&lt;a href="#range"&gt;range()&lt;/a&gt;方法一样，区别就是它返回的是一个xrange对象而不是一个列表。惰性计算！当x很大的时候，一定要用xrange。&lt;/p&gt;
+&lt;p&gt;&lt;span id="zip"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;zip([iterable,...])&lt;/h3&gt;
+&lt;p&gt;该函数返回一个元组的列表，其中第i个元素包含每个元素的序列的第i个元素。&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;4&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="mi"&gt;6&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;
+&lt;span class="c1"&gt;#可用于转置矩阵&lt;/span&gt;
+&lt;span class="n"&gt;zipped&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;zip&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;#[(1, 4), (2, 5), (3, 6)]&lt;/span&gt;
+
+&lt;span class="n"&gt;x2&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;y2&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;zip&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="o"&gt;*&lt;/span&gt;&lt;span class="n"&gt;zipped&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;x&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;x2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt; &lt;span class="ow"&gt;and&lt;/span&gt; &lt;span class="n"&gt;y&lt;/span&gt; &lt;span class="o"&gt;==&lt;/span&gt; &lt;span class="nb"&gt;list&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;y2&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;  &lt;span class="c1"&gt;#True&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;&lt;span id="_import_"&gt;&lt;/span&gt;&lt;/p&gt;
+&lt;h3&gt;__import__()&lt;/h3&gt;
+&lt;p&gt;这种高级引入模块的方法，不常用，所以pass&lt;/p&gt;</description><dc:creator xmlns:dc="http://purl.org/dc/elements/1.1/">xueweihan</dc:creator><pubDate>Sat, 19 Mar 2016 22:01:00 +0800</pubDate><guid>tag:xueweihan.com,2016-03-19:python-build-in-func.html</guid><category>python</category><category>基础</category></item><item><title>什么是真正的程序员</title><link>http://xueweihan.com/the-real-programer.html</link><description>&lt;blockquote&gt;
 &lt;p&gt;这篇文章的原文来自：&lt;a href="http://ferd.ca/the-little-printf.html"&gt;A Little Printf Story&lt;/a&gt;&lt;br&gt;作者仿照《小王子》中的情节，通过小printf遇见的不同类型的程序员，最后悟出什么才是真正的程序员！&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;文章略长，但是耐心读完，你肯定会受益良多！&lt;/p&gt;
