@@ -58,24 +58,124 @@
 
     <div class='article'>
         <div class="content-title">
-            <a href="http://xueweihan.com/python-build-in-func.html"><h1>Python内建方法学习笔记</h1></a>
-            <div class= "well small"> 2016-03-19 22:01
+            <a href="http://xueweihan.com/http-status-code.html"><h1>HTTP状态码大全（转自wiki）</h1></a>
+            <div class= "well small"> 2016-03-23 21:16
 
 by <a class="url fn" href="http://xueweihan.com/author/xueweihan.html">xueweihan</a>
  
 
 
  </div>
-            <div class="summary"><h1>撸一遍python的内建方法</h1>
+            <div class="summary"><h2>1xx消息</h2>
+<p>这一类型的状态码，代表请求已被接受，需要继续处理。这类响应是临时响应，只包含状态行和某些可选的响应头信息，并以空行结束。由于HTTP/1.0协议中没有定义任何1xx状态码，所以除非在某些试验条件下，服务器禁止向此类客户端发送1xx响应。 这些状态码代表的响应都是信息性的，标示客户应该采取的其他行动。</p>
+<p><strong>100 Continue</strong><br />
+客户端应当继续发送请求。这个临时响应是用来通知客户端它的部分请求已经被服务器接收，且仍未被拒绝。客户端应当继续发送请求的剩余部分，或者如果请求已经完成，忽略这个响应。服务器必须在请求完成后向客户端发送一个最终响应。</p>
+<p><strong>101 Switching Protocols</strong><br />
+服务器已经理解了客户端的请求，并将通过Upgrade消息头通知客户端采用不同的协议来完成这个请求。在发送完这个响应最后的空行后，服务器将会切换到在Upgrade消息头中定义的那些协议。<br />
+只有在切换新的协议更有好处的时候才应该采取类似措施。例如，切换到新的HTTP版本（如HTTP/2）比旧版本更有优势，或者切换到一个实时且同步的协议以传送利用此类特性的资源。</p>
+<p><strong>102 Processing</strong><br />
+由WebDAV扩展的状态码，代表处理将被继续执行。</p>
+<h2>2xx成功</h2>
+<p>这一类型的状态码，代表请求已成功被服务器接收、理解、并接受。</p>
+<p><strong>200 OK</strong><br />
+请求已成功，请求所希望的响应头或数据体将随此响应返回 ...</p> <a class="btn btn-info xsmall" href="http://xueweihan.com/http-status-code.html">read more</a></div>
+        </div>
+    </div>
+		
+
+ 
+
+
+    <div class='article'>
+        <a href="http://xueweihan.com/python-pip-install-mysql-connector-python-fail.html"><h2>Python pip install mysql-connector-python 2.0.1 失败</h2></a>
+        <div class= "well small"> 2016-03-22 22:16
+
+by <a class="url fn" href="http://xueweihan.com/author/xueweihan.html">xueweihan</a>
+ 
+
+
+ </div>
+        <div class="summary"><h1>Python pip install mysql-connector-python 2.0.1 失败</h1>
+<p>如图：</p>
+<p><img alt="错误展示" src="http://7xqirw.com1.z0.glb.clouddn.com/759200-20160119121143078-554548811.png" /></p>
+<p>尝试了：pip install mysql-connector-python==2.0.1错误依旧</p>
+<p>解决方法：</p>
+<div class="highlight"><pre><span></span>wget https://cdn.mysql.com/Downloads/Connector-Python/mysql-connector-python-2.0.3.zip
+
+unzip mysql-connector-python-2.0.3.zip
+
+<span class="nb">cd</span> mysql-connector-python-2.0.3
+
+python setup.py install
+</pre></div>
+
+
+<p>参照:<a href="http://stackoverflow.com/questions/27394426/python-pip-install-mysql-connector-python-2-0-1-fails">stackoverflow</a></p> <a class="btn btn-info xsmall" href="http://xueweihan.com/python-pip-install-mysql-connector-python-fail.html">read more</a></div>
+    </div>
+
+
+ 
+
+
+    <div class='article'>
+        <a href="http://xueweihan.com/python-abstract-method.html"><h2>Python抽象方法实现</h2></a>
+        <div class= "well small"> 2016-03-21 22:16
+
+by <a class="url fn" href="http://xueweihan.com/author/xueweihan.html">xueweihan</a>
+ 
+
+
+ </div>
+        <div class="summary"><h2>抽象方法</h2>
+<p>我的理解抽象方法就是：父类的一个方法，继承的所有子类都必须要实现这个方法，否则报错。</p>
+<h2>举例说明</h2>
+<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Base</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">_method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">u&quot;出错了，你没有实现这个抽象方法&quot;</span><span class="p">)</span>
+
+<span class="k">class</span> <span class="nc">A</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
+    <span class="k">def</span> <span class="nf">_method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">print</span> <span class="s2">u&quot;重写了这个方法，就不会报错了！&quot;</span>
+</pre></div>
+
+
+<p>这个例子，实现了抽象方法的功能。还有一个更加pythonic的方法，就是用<code>abc.ABCMeta</code></p>
+<h2>ABCMeta</h2>
+<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">abc</span>
+<span class="k">class</span> <span class="nc">Base</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
+    <span class="n">__metaclass__</span> <span class="o">=</span> <span class="n">abc</span><span class="o">.</span><span class="n">ABCMeta</span>
+
+    <span class="nd">@abc.abstractmethod</span>
+    <span class="k">def</span> <span class="nf">_method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
+        <span class="k">return</span>
+</pre></div>
+
+
+<p>父类通过定义<code>__metaclass__ ...</code></p> <a class="btn btn-info xsmall" href="http://xueweihan.com/python-abstract-method.html">read more</a></div>
+    </div>
+
+
+ 
+
+
+    <div class='article'>
+        <a href="http://xueweihan.com/python-build-in-func.html"><h2>Python内建方法学习笔记</h2></a>
+        <div class= "well small"> 2016-03-19 22:01
+
+by <a class="url fn" href="http://xueweihan.com/author/xueweihan.html">xueweihan</a>
+ 
+
+
+ </div>
+        <div class="summary"><h1>撸一遍python的内建方法</h1>
 <p>这样做的好处就是：我如果要完成一个功能的时候，如果能用内建方法完成，就用内建方法。这样可以提高效率，同时使自己的代码更加优雅。哎呦？那岂不是撸完就是python高手了？我先帮大家试试效果，请静候我的反馈！</p>
 <p>反馈：内建方法全部看完了，并敲完所有的内建方法，收获还是有的，但是发现不了解的知识更多了。内建方法属于python的标准库中的一章。python的标准库中还有很多值得一看的章节。<a href="http://python.usyiyi.cn/python_278/library/index.html">python2.7.8中文标准库文档</a>，这些内容我粗略的看了一遍。这个内建方法的学习笔记我周三就写完了，本来想在写内建类型的学习笔记。但是发现太多了！而且我发现，看的太多记下的东西就会变少，所以我打算把重心转移到我自己练手的项目中（现在还没什么值得分享的东西，等拿得出手肯定会告诉大家的）。我想把学习标准库中收获的技巧用到我的项目中，这样学以致用才能真正融汇贯通。这就是我的下一步学习计划：通过实际项目，运用python标准库中的技巧！</p>
 <p>结论就是：看完标准库我还没有成为高手，但是我收获了很多知识，基础牢固了一些。下一步打算在我自己的项目中运用这些技巧，提高自己的能力和技术！</p>
 <p>相关资料
 - <a href="https://docs.python.org/2/library/functions.html#all" title="官方文档－英文">官方文档－内建方法(英文)－2.7.11</a>
 - <a href="http://python.usyiyi.cn/python_278/library/functions.html" title="官方文档－中文">官方文档－内建方法 ...</a></p> <a class="btn btn-info xsmall" href="http://xueweihan.com/python-build-in-func.html">read more</a></div>
-        </div>
     </div>
-		
+
 
  
 

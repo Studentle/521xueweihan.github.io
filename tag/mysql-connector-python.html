@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
     <meta charset="utf-8">
-    <title>削微寒 - python</title>
+    <title>削微寒 - mysql-connector-python</title>
     <meta name="description" content="">
     <meta name="author" content="xueweihan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -85,74 +85,11 @@ python setup.py install
         </div>
     </div>
 		
-
- 
-
-
-    <div class='article'>
-        <a href="http://xueweihan.com/python-abstract-method.html"><h2>Python抽象方法实现</h2></a>
-        <div class= "well small"> 2016-03-21 22:16
-
-by <a class="url fn" href="http://xueweihan.com/author/xueweihan.html">xueweihan</a>
- 
-
-
- </div>
-        <div class="summary"><h2>抽象方法</h2>
-<p>我的理解抽象方法就是：父类的一个方法，继承的所有子类都必须要实现这个方法，否则报错。</p>
-<h2>举例说明</h2>
-<div class="highlight"><pre><span></span><span class="k">class</span> <span class="nc">Base</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">_method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">raise</span> <span class="ne">NotImplementedError</span><span class="p">(</span><span class="s2">u&quot;出错了，你没有实现这个抽象方法&quot;</span><span class="p">)</span>
-
-<span class="k">class</span> <span class="nc">A</span><span class="p">(</span><span class="n">Base</span><span class="p">):</span>
-    <span class="k">def</span> <span class="nf">_method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">print</span> <span class="s2">u&quot;重写了这个方法，就不会报错了！&quot;</span>
-</pre></div>
-
-
-<p>这个例子，实现了抽象方法的功能。还有一个更加pythonic的方法，就是用<code>abc.ABCMeta</code></p>
-<h2>ABCMeta</h2>
-<div class="highlight"><pre><span></span><span class="kn">import</span> <span class="nn">abc</span>
-<span class="k">class</span> <span class="nc">Base</span><span class="p">(</span><span class="nb">object</span><span class="p">):</span>
-    <span class="n">__metaclass__</span> <span class="o">=</span> <span class="n">abc</span><span class="o">.</span><span class="n">ABCMeta</span>
-
-    <span class="nd">@abc.abstractmethod</span>
-    <span class="k">def</span> <span class="nf">_method</span><span class="p">(</span><span class="bp">self</span><span class="p">):</span>
-        <span class="k">return</span>
-</pre></div>
-
-
-<p>父类通过定义<code>__metaclass__ ...</code></p> <a class="btn btn-info xsmall" href="http://xueweihan.com/python-abstract-method.html">read more</a></div>
-    </div>
-
-
- 
-
-
-    <div class='article'>
-        <a href="http://xueweihan.com/python-build-in-func.html"><h2>Python内建方法学习笔记</h2></a>
-        <div class= "well small"> 2016-03-19 22:01
-
-by <a class="url fn" href="http://xueweihan.com/author/xueweihan.html">xueweihan</a>
- 
-
-
- </div>
-        <div class="summary"><h1>撸一遍python的内建方法</h1>
-<p>这样做的好处就是：我如果要完成一个功能的时候，如果能用内建方法完成，就用内建方法。这样可以提高效率，同时使自己的代码更加优雅。哎呦？那岂不是撸完就是python高手了？我先帮大家试试效果，请静候我的反馈！</p>
-<p>反馈：内建方法全部看完了，并敲完所有的内建方法，收获还是有的，但是发现不了解的知识更多了。内建方法属于python的标准库中的一章。python的标准库中还有很多值得一看的章节。<a href="http://python.usyiyi.cn/python_278/library/index.html">python2.7.8中文标准库文档</a>，这些内容我粗略的看了一遍。这个内建方法的学习笔记我周三就写完了，本来想在写内建类型的学习笔记。但是发现太多了！而且我发现，看的太多记下的东西就会变少，所以我打算把重心转移到我自己练手的项目中（现在还没什么值得分享的东西，等拿得出手肯定会告诉大家的）。我想把学习标准库中收获的技巧用到我的项目中，这样学以致用才能真正融汇贯通。这就是我的下一步学习计划：通过实际项目，运用python标准库中的技巧！</p>
-<p>结论就是：看完标准库我还没有成为高手，但是我收获了很多知识，基础牢固了一些。下一步打算在我自己的项目中运用这些技巧，提高自己的能力和技术！</p>
-<p>相关资料
-- <a href="https://docs.python.org/2/library/functions.html#all" title="官方文档－英文">官方文档－内建方法(英文)－2.7.11</a>
-- <a href="http://python.usyiyi.cn/python_278/library/functions.html" title="官方文档－中文">官方文档－内建方法 ...</a></p> <a class="btn btn-info xsmall" href="http://xueweihan.com/python-build-in-func.html">read more</a></div>
-    </div>
-
 <div class="pagination">
 <ul>
     <li class="prev disabled"><a href="#">&larr; Previous</a></li>
 
-    <li class="active"><a href="http://xueweihan.com/tag/python.html">1</a></li>
+    <li class="active"><a href="http://xueweihan.com/tag/mysql-connector-python.html">1</a></li>
 
     <li class="next disabled"><a href="#">&rarr; Next</a></li>
 
