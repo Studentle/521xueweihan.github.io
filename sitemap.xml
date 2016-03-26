@@ -5,37 +5,44 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://xueweihan.com/</loc>
-<lastmod>2016-03-23T22:50:07-00:00</lastmod>
+<lastmod>2016-03-26T22:26:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://xueweihan.com/archives.html</loc>
-<lastmod>2016-03-23T22:50:07-00:00</lastmod>
+<lastmod>2016-03-26T22:26:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://xueweihan.com/tags.html</loc>
-<lastmod>2016-03-23T22:50:07-00:00</lastmod>
+<lastmod>2016-03-26T22:26:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://xueweihan.com/categories.html</loc>
-<lastmod>2016-03-23T22:50:07-00:00</lastmod>
+<lastmod>2016-03-26T22:26:33-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>http://xueweihan.com/pages/my-book-life.html</loc>
-<lastmod>2016-03-23T22:50:07-00:00</lastmod>
+<lastmod>2016-03-26T22:26:33-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.3</priority>
+</url>
+
+<url>
+<loc>http://xueweihan.com/lazy.html</loc>
+<lastmod>2016-03-24T18:51:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
 </url>
 
 <url>
@@ -96,7 +103,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://xueweihan.com/category/ri-ji.html</loc>
-<lastmod>2016-02-28T00:00:00+08:06</lastmod>
+<lastmod>2016-03-24T18:51:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -104,6 +111,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>http://xueweihan.com/tag/webji-chu.html</loc>
 <lastmod>2016-03-23T21:16:00+08:06</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>http://xueweihan.com/tag/lan.html</loc>
+<lastmod>2016-03-24T18:51:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -180,7 +194,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>http://xueweihan.com/author/xueweihan.html</loc>
-<lastmod>2016-03-23T21:16:00+08:06</lastmod>
+<lastmod>2016-03-24T18:51:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
