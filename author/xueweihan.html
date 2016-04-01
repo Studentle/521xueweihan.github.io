@@ -58,23 +58,61 @@
 
     <div class='article'>
         <div class="content-title">
-            <a href="http://xueweihan.com/lazy.html"><h1>不知道做什么——>懒</h1></a>
-            <div class= "well small"> 2016-03-24 18:51
+            <a href="http://xueweihan.com/highlight.html"><h1>使用highlight实现代码高亮</h1></a>
+            <div class= "well small"> 2016-04-01 21:46
 
 by <a class="url fn" href="http://xueweihan.com/author/xueweihan.html">xueweihan</a>
  
 
 
  </div>
-            <div class="summary"><p>很多时候，我想到一个能让自己热血沸腾的点子💡，创意。当我仔细思考，这个点的某个功能如何实现，选用那种技术，实用性等等因素之后。我就认为这个点子实现的可能性为‘零’，最终这个最初让我热血沸腾的点子，就会死在我的‘脑子里’。以至于，每次想到一个💡，到最后都是以否定而结尾的。弄的我都不相信自己能做出一些东西，这种感觉特别沮丧！</p>
+            <div class="summary"><h2>步骤</h2>
+<ol>
+<li>去官网下载：https://highlightjs.org/</li>
+<li>在页面上引入，样式css和highlight.js静态文件</li>
+<li>加入一段js代码，使得highlight.js生效，分析<code>&lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</code>标签中的内容，实现代码高亮：</li>
+</ol>
+<div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span><span class="nx">hljs</span><span class="p">.</span><span class="nx">initHighlightingOnLoad</span><span class="p">();</span><span class="o">&lt;</span><span class="err">/script&gt;</span>
+</pre></div>
+
+
+<h2>实例：</h2>
+<p><strong>注意</strong>：我的css和js都放到了<code>static</code>目录下</p>
+<div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;zh-CN&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
+        <span class="c">&lt;!-- Hightlight.css --&gt;</span>
+        <span class="c">&lt;!-- 我选用的是hybrid主题 --&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/static/css/hybrid.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">pre ...</span></pre></div> <a class="btn btn-info xsmall" href="http://xueweihan.com/highlight.html">read more</a></div>
+        </div>
+    </div>
+		
+
+ 
+
+
+    <div class='article'>
+        <a href="http://xueweihan.com/lazy.html"><h2>不知道做什么——>懒</h2></a>
+        <div class= "well small"> 2016-03-24 18:51
+
+by <a class="url fn" href="http://xueweihan.com/author/xueweihan.html">xueweihan</a>
+ 
+
+
+ </div>
+        <div class="summary"><p>很多时候，我想到一个能让自己热血沸腾的点子💡，创意。当我仔细思考，这个点的某个功能如何实现，选用那种技术，实用性等等因素之后。我就认为这个点子实现的可能性为‘零’，最终这个最初让我热血沸腾的点子，就会死在我的‘脑子里’。以至于，每次想到一个💡，到最后都是以否定而结尾的。弄的我都不相信自己能做出一些东西，这种感觉特别沮丧！</p>
 <p>我称这种状态为：</p>
 <h2>不知道做什么？</h2>
 <p>今年，我在给自己写2016计划的时候，我认真的思考之后。没有写什么大的目标，而是给自列了一个每日的任务清单。都是一些很小的事情，例如：背单词，每天看一个小时书等。前段时间，我看完了《自控力》得到的一个感悟就是：</p>
 <blockquote>
 <p>自控力是需要锻炼的，就像肌肉一样。同时需要逐步的建立信心，千万不要埋怨自己。比如：坚持每天看一个小时书，如果有一天没有完成这个任务，不要自暴自弃。自我埋怨，过度的自我批评。会让自己真的觉得自己坚持不下去，从而有借口放弃。自控力是一点点变的强大的，当你每天可以坚持一件很小的事情，渐渐的你会发现，你坚持的事情很有意义。信心也会强大，这个时候你就会去做更有意义的事情 ...</p></blockquote> <a class="btn btn-info xsmall" href="http://xueweihan.com/lazy.html">read more</a></div>
-        </div>
     </div>
-		
+
 
  
 

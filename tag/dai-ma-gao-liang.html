@@ -2,7 +2,7 @@
 <html lang="zh">
 <head>
     <meta charset="utf-8">
-    <title>削微寒 - Archives</title>
+    <title>削微寒 - 代码高亮</title>
     <meta name="description" content="">
     <meta name="author" content="xueweihan">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -54,50 +54,56 @@
 
         <div class="span9">
 
-<h1>档案</h1>
-
-<table class="table">
-    <tbody>
-        <tr>
-        <td>2016年04月01日</td>
-        <td><a href='http://xueweihan.com/highlight.html'>使用highlight实现代码高亮</a></td>
-        </tr>
-        <tr>
-        <td>2016年03月24日</td>
-        <td><a href='http://xueweihan.com/lazy.html'>不知道做什么——>懒</a></td>
-        </tr>
-        <tr>
-        <td>2016年03月23日</td>
-        <td><a href='http://xueweihan.com/http-status-code.html'>HTTP状态码大全（转自wiki）</a></td>
-        </tr>
-        <tr>
-        <td>2016年03月22日</td>
-        <td><a href='http://xueweihan.com/python-pip-install-mysql-connector-python-fail.html'>Python pip install mysql-connector-python 2.0.1 失败</a></td>
-        </tr>
-        <tr>
-        <td>2016年03月21日</td>
-        <td><a href='http://xueweihan.com/python-abstract-method.html'>Python抽象方法实现</a></td>
-        </tr>
-        <tr>
-        <td>2016年03月19日</td>
-        <td><a href='http://xueweihan.com/python-build-in-func.html'>Python内建方法学习笔记</a></td>
-        </tr>
-        <tr>
-        <td>2016年02月29日</td>
-        <td><a href='http://xueweihan.com/the-real-programer.html'>什么是真正的程序员</a></td>
-        </tr>
-        <tr>
-        <td>2016年02月29日</td>
-        <td><a href='http://xueweihan.com/pelican-build-bolg.html'>用pelican在Github pages上搭建博客</a></td>
-        </tr>
-        <tr>
-        <td>2016年02月28日</td>
-        <td><a href='http://xueweihan.com/helloworld.html'>HelloWorld</a></td>
-        </tr>
-    </tbody>
-</table>
 
 
+    <div class='article'>
+        <div class="content-title">
+            <a href="http://xueweihan.com/highlight.html"><h1>使用highlight实现代码高亮</h1></a>
+            <div class= "well small"> 2016-04-01 21:46
+
+by <a class="url fn" href="http://xueweihan.com/author/xueweihan.html">xueweihan</a>
+ 
+
+
+ </div>
+            <div class="summary"><h2>步骤</h2>
+<ol>
+<li>去官网下载：https://highlightjs.org/</li>
+<li>在页面上引入，样式css和highlight.js静态文件</li>
+<li>加入一段js代码，使得highlight.js生效，分析<code>&lt;pre&gt;&lt;code&gt;&lt;/code&gt;&lt;/pre&gt;</code>标签中的内容，实现代码高亮：</li>
+</ol>
+<div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="nx">script</span><span class="o">&gt;</span><span class="nx">hljs</span><span class="p">.</span><span class="nx">initHighlightingOnLoad</span><span class="p">();</span><span class="o">&lt;</span><span class="err">/script&gt;</span>
+</pre></div>
+
+
+<h2>实例：</h2>
+<p><strong>注意</strong>：我的css和js都放到了<code>static</code>目录下</p>
+<div class="highlight"><pre><span></span><span class="cp">&lt;!DOCTYPE html&gt;</span>
+<span class="p">&lt;</span><span class="nt">html</span> <span class="na">lang</span><span class="o">=</span><span class="s">&quot;zh-CN&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;</span><span class="nt">head</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">meta</span> <span class="na">charset</span><span class="o">=</span><span class="s">&quot;utf-8&quot;</span><span class="p">&gt;</span>
+        <span class="c">&lt;!-- Hightlight.css --&gt;</span>
+        <span class="c">&lt;!-- 我选用的是hybrid主题 --&gt;</span>
+        <span class="p">&lt;</span><span class="nt">link</span> <span class="na">href</span><span class="o">=</span><span class="s">&quot;/static/css/hybrid.css&quot;</span> <span class="na">rel</span><span class="o">=</span><span class="s">&quot;stylesheet&quot;</span><span class="p">&gt;</span>
+    <span class="p">&lt;/</span><span class="nt">head</span><span class="p">&gt;</span>
+
+    <span class="p">&lt;</span><span class="nt">body</span><span class="p">&gt;</span>
+        <span class="p">&lt;</span><span class="nt">pre ...</span></pre></div> <a class="btn btn-info xsmall" href="http://xueweihan.com/highlight.html">read more</a></div>
+        </div>
+    </div>
+		
+<div class="pagination">
+<ul>
+    <li class="prev disabled"><a href="#">&larr; Previous</a></li>
+
+    <li class="active"><a href="http://xueweihan.com/tag/dai-ma-gao-liang.html">1</a></li>
+
+    <li class="next disabled"><a href="#">&rarr; Next</a></li>
+
+</ul>
+</div>
+ 
+  
         </div>
 
         <div class="span3">

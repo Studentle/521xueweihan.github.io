@@ -1,5 +1,67 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>削微寒</title><link href="http://xueweihan.com/" rel="alternate"></link><link href="http://xueweihan.com/feeds/xueweihan.atom.xml" rel="self"></link><id>http://xueweihan.com/</id><updated>2016-03-24T18:51:00+08:00</updated><entry><title>不知道做什么——&gt;懒</title><link href="http://xueweihan.com/lazy.html" rel="alternate"></link><updated>2016-03-24T18:51:00+08:00</updated><author><name>xueweihan</name></author><id>tag:xueweihan.com,2016-03-24:lazy.html</id><summary type="html">&lt;p&gt;很多时候，我想到一个能让自己热血沸腾的点子💡，创意。当我仔细思考，这个点的某个功能如何实现，选用那种技术，实用性等等因素之后。我就认为这个点子实现的可能性为‘零’，最终这个最初让我热血沸腾的点子，就会死在我的‘脑子里’。以至于，每次想到一个💡，到最后都是以否定而结尾的。弄的我都不相信自己能做出一些东西，这种感觉特别沮丧！&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>削微寒</title><link href="http://xueweihan.com/" rel="alternate"></link><link href="http://xueweihan.com/feeds/xueweihan.atom.xml" rel="self"></link><id>http://xueweihan.com/</id><updated>2016-04-01T21:46:00+08:00</updated><entry><title>使用highlight实现代码高亮</title><link href="http://xueweihan.com/highlight.html" rel="alternate"></link><updated>2016-04-01T21:46:00+08:00</updated><author><name>xueweihan</name></author><id>tag:xueweihan.com,2016-04-01:highlight.html</id><summary type="html">&lt;h2&gt;步骤&lt;/h2&gt;
+&lt;ol&gt;
+&lt;li&gt;去官网下载：https://highlightjs.org/&lt;/li&gt;
+&lt;li&gt;在页面上引入，样式css和highlight.js静态文件&lt;/li&gt;
+&lt;li&gt;加入一段js代码，使得highlight.js生效，分析&lt;code&gt;&amp;lt;pre&amp;gt;&amp;lt;code&amp;gt;&amp;lt;/code&amp;gt;&amp;lt;/pre&amp;gt;&lt;/code&gt;标签中的内容，实现代码高亮：&lt;/li&gt;
+&lt;/ol&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nx"&gt;script&lt;/span&gt;&lt;span class="o"&gt;&amp;gt;&lt;/span&gt;&lt;span class="nx"&gt;hljs&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;initHighlightingOnLoad&lt;/span&gt;&lt;span class="p"&gt;();&lt;/span&gt;&lt;span class="o"&gt;&amp;lt;&lt;/span&gt;&lt;span class="err"&gt;/script&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;实例：&lt;/h2&gt;
+&lt;p&gt;&lt;strong&gt;注意&lt;/strong&gt;：我的css和js都放到了&lt;code&gt;static&lt;/code&gt;目录下&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="cp"&gt;&amp;lt;!DOCTYPE html&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt; &lt;span class="na"&gt;lang&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;zh-CN&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;meta&lt;/span&gt; &lt;span class="na"&gt;charset&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;utf-8&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="c"&gt;&amp;lt;!-- Hightlight.css --&amp;gt;&lt;/span&gt;
+        &lt;span class="c"&gt;&amp;lt;!-- 我选用的是hybrid主题 --&amp;gt;&lt;/span&gt;
+        &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;link&lt;/span&gt; &lt;span class="na"&gt;href&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;/static/css/hybrid.css&amp;quot;&lt;/span&gt; &lt;span class="na"&gt;rel&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;stylesheet&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;head&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+
+    &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+        &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;pre&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;code&lt;/span&gt; &lt;span class="na"&gt;class&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;language-py&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+            def open(self, doc_uuid=None):
+               if doc_uuid is None:
+                   self.uuid = str(uuid.uuid4())
+        &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;code&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;pre&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="c"&gt;&amp;lt;!-- hightlight.js --&amp;gt;&lt;/span&gt;
+    &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt; &lt;span class="na"&gt;src&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="s"&gt;&amp;quot;/static/js/highlight.pack.js&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="p"&gt;&amp;lt;&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;&lt;span class="nx"&gt;hljs&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="nx"&gt;initHighlightingOnLoad&lt;/span&gt;&lt;span class="p"&gt;();&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;script&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+    &lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;body&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;span class="p"&gt;&amp;lt;/&lt;/span&gt;&lt;span class="nt"&gt;html&lt;/span&gt;&lt;span class="p"&gt;&amp;gt;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h2&gt;坑&lt;/h2&gt;
+&lt;p&gt;现在有一个问题:因为文章中有代码块，代码块中的代码片段可以通过highlight.js转变成
+安全的内容。但是如果对用户输入的全部内容进行转义，则会造成：代码块中的代码显示出错。&lt;/p&gt;
+&lt;p&gt;解决办法：使用正则匹配，对非&lt;code&gt;&amp;lt;pre&amp;gt;&amp;lt;/pre&amp;gt;&lt;/code&gt;标签内容进行转义。&lt;br /&gt;
+终极解决办法：这个问题把我都弄崩溃了，其实问题很简单，因为highlight.js对于'lt'和'gt'会渲染
+成高亮，导致转移后的'&amp;gt;'和'&amp;lt;'，html无法识别！所以只需要，反转义代码块中的&lt;code&gt;&amp;amp;amp;&lt;/code&gt;。我靠坑啊！&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;def&lt;/span&gt; &lt;span class="nf"&gt;code_unescape&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
+    &lt;span class="sd"&gt;&amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+&lt;span class="sd"&gt;    代码块中的内容不转义&lt;/span&gt;
+&lt;span class="sd"&gt;    &amp;quot;&amp;quot;&amp;quot;&lt;/span&gt;
+    &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;group&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="mi"&gt;0&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="c1"&gt;# 反转义&amp;quot;&amp;amp;amp;&amp;quot;，使得&amp;#39;&amp;lt;&amp;#39;,&amp;#39;&amp;gt;&amp;#39;是html转义的符号。&lt;/span&gt;
+    &lt;span class="c1"&gt;# hightligth.js有个坑，lg和lt会高亮，使得html识别不了&amp;quot;&amp;amp;lt;&amp;quot;和&amp;quot;&amp;amp;gt;&amp;quot;。&lt;/span&gt;
+    &lt;span class="n"&gt;s&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;replace&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s2"&gt;&amp;quot;&amp;amp;amp;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="s2"&gt;&amp;quot;&amp;amp;&amp;quot;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+    &lt;span class="k"&gt;return&lt;/span&gt; &lt;span class="n"&gt;s&lt;/span&gt;
+
+&lt;span class="n"&gt;content&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="nb"&gt;unicode&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;markdown2&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;markdown&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;escape&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;html_escape&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;content&lt;/span&gt;&lt;span class="p"&gt;),&lt;/span&gt;
+                                     &lt;span class="n"&gt;extras&lt;/span&gt;&lt;span class="o"&gt;=&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;fenced-code-blocks&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;]))&lt;/span&gt;
+&lt;span class="c1"&gt;# 反转义代码块中的&amp;quot;&amp;amp;amp;&amp;quot;&lt;/span&gt;
+&lt;span class="n"&gt;m&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;re&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;compile&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="s1"&gt;&amp;#39;\&amp;lt;pre\&amp;gt;[\s\S]*\&amp;lt;\/pre\&amp;gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;span class="n"&gt;content&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;m&lt;/span&gt;&lt;span class="o"&gt;.&lt;/span&gt;&lt;span class="n"&gt;sub&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="n"&gt;code_unescape&lt;/span&gt;&lt;span class="p"&gt;,&lt;/span&gt; &lt;span class="n"&gt;content&lt;/span&gt;&lt;span class="p"&gt;)&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;参考：
+- &lt;a href="http://www.ghostchina.com/adding-syntax-highlighting-to-ghost-using-highlight-js/"&gt;ghostchina&lt;/a&gt;
+- &lt;a href="https://github.com/trentm/python-markdown2/wiki/fenced-code-blocks"&gt;highlight&lt;/a&gt;
+- &lt;a href="http://www.cnblogs.com/smdm/p/5323140.html"&gt;markdown以及highlight&lt;/a&gt;&lt;/p&gt;</summary><category term="代码高亮"></category></entry><entry><title>不知道做什么——&gt;懒</title><link href="http://xueweihan.com/lazy.html" rel="alternate"></link><updated>2016-03-24T18:51:00+08:00</updated><author><name>xueweihan</name></author><id>tag:xueweihan.com,2016-03-24:lazy.html</id><summary type="html">&lt;p&gt;很多时候，我想到一个能让自己热血沸腾的点子💡，创意。当我仔细思考，这个点的某个功能如何实现，选用那种技术，实用性等等因素之后。我就认为这个点子实现的可能性为‘零’，最终这个最初让我热血沸腾的点子，就会死在我的‘脑子里’。以至于，每次想到一个💡，到最后都是以否定而结尾的。弄的我都不相信自己能做出一些东西，这种感觉特别沮丧！&lt;/p&gt;
 &lt;p&gt;我称这种状态为：&lt;/p&gt;
 &lt;h2&gt;不知道做什么？&lt;/h2&gt;
 &lt;p&gt;今年，我在给自己写2016计划的时候，我认真的思考之后。没有写什么大的目标，而是给自列了一个每日的任务清单。都是一些很小的事情，例如：背单词，每天看一个小时书等。前段时间，我看完了《自控力》得到的一个感悟就是：&lt;/p&gt;
