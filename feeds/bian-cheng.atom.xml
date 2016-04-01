@@ -58,10 +58,12 @@
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;参考：
-- &lt;a href="http://www.ghostchina.com/adding-syntax-highlighting-to-ghost-using-highlight-js/"&gt;ghostchina&lt;/a&gt;
-- &lt;a href="https://github.com/trentm/python-markdown2/wiki/fenced-code-blocks"&gt;highlight&lt;/a&gt;
-- &lt;a href="http://www.cnblogs.com/smdm/p/5323140.html"&gt;markdown以及highlight&lt;/a&gt;&lt;/p&gt;</summary><category term="代码高亮"></category></entry><entry><title>HTTP状态码大全（转自wiki）</title><link href="http://xueweihan.com/http-status-code.html" rel="alternate"></link><updated>2016-03-23T21:16:00+08:00</updated><author><name>xueweihan</name></author><id>tag:xueweihan.com,2016-03-23:http-status-code.html</id><summary type="html">&lt;h2&gt;1xx消息&lt;/h2&gt;
+&lt;h2&gt;参考：&lt;/h2&gt;
+&lt;ul&gt;
+&lt;li&gt;&lt;a href="http://www.ghostchina.com/adding-syntax-highlighting-to-ghost-using-highlight-js/"&gt;ghostchina&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="https://github.com/trentm/python-markdown2/wiki/fenced-code-blocks"&gt;highlight&lt;/a&gt;&lt;/li&gt;
+&lt;li&gt;&lt;a href="http://www.cnblogs.com/smdm/p/5323140.html"&gt;markdown以及highlight&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;</summary><category term="代码高亮"></category></entry><entry><title>HTTP状态码大全（转自wiki）</title><link href="http://xueweihan.com/http-status-code.html" rel="alternate"></link><updated>2016-03-23T21:16:00+08:00</updated><author><name>xueweihan</name></author><id>tag:xueweihan.com,2016-03-23:http-status-code.html</id><summary type="html">&lt;h2&gt;1xx消息&lt;/h2&gt;
 &lt;p&gt;这一类型的状态码，代表请求已被接受，需要继续处理。这类响应是临时响应，只包含状态行和某些可选的响应头信息，并以空行结束。由于HTTP/1.0协议中没有定义任何1xx状态码，所以除非在某些试验条件下，服务器禁止向此类客户端发送1xx响应。 这些状态码代表的响应都是信息性的，标示客户应该采取的其他行动。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;100 Continue&lt;/strong&gt;&lt;br /&gt;
 客户端应当继续发送请求。这个临时响应是用来通知客户端它的部分请求已经被服务器接收，且仍未被拒绝。客户端应当继续发送请求的剩余部分，或者如果请求已经完成，忽略这个响应。服务器必须在请求完成后向客户端发送一个最终响应。&lt;/p&gt;
