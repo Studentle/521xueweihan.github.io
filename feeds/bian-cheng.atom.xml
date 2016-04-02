@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>削微寒</title><link href="http://xueweihan.com/" rel="alternate"></link><link href="http://xueweihan.com/feeds/bian-cheng.atom.xml" rel="self"></link><id>http://xueweihan.com/</id><updated>2016-04-01T21:46:00+08:00</updated><entry><title>使用highlight实现代码高亮</title><link href="http://xueweihan.com/highlight.html" rel="alternate"></link><updated>2016-04-01T21:46:00+08:00</updated><author><name>xueweihan</name></author><id>tag:xueweihan.com,2016-04-01:highlight.html</id><summary type="html">&lt;h2&gt;步骤&lt;/h2&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>削微寒</title><link href="http://www.xueweihan.com/" rel="alternate"></link><link href="http://www.xueweihan.com/feeds/bian-cheng.atom.xml" rel="self"></link><id>http://www.xueweihan.com/</id><updated>2016-04-01T21:46:00+08:00</updated><entry><title>使用highlight实现代码高亮</title><link href="http://www.xueweihan.com/highlight.html" rel="alternate"></link><updated>2016-04-01T21:46:00+08:00</updated><author><name>xueweihan</name></author><id>tag:www.xueweihan.com,2016-04-01:highlight.html</id><summary type="html">&lt;h2&gt;步骤&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;去官网下载：https://highlightjs.org/&lt;/li&gt;
 &lt;li&gt;在页面上引入，样式css和highlight.js静态文件&lt;/li&gt;
@@ -63,7 +63,7 @@
 &lt;li&gt;&lt;a href="http://www.ghostchina.com/adding-syntax-highlighting-to-ghost-using-highlight-js/"&gt;ghostchina&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="https://github.com/trentm/python-markdown2/wiki/fenced-code-blocks"&gt;highlight&lt;/a&gt;&lt;/li&gt;
 &lt;li&gt;&lt;a href="http://www.cnblogs.com/smdm/p/5323140.html"&gt;markdown以及highlight&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="代码高亮"></category></entry><entry><title>HTTP状态码大全（转自wiki）</title><link href="http://xueweihan.com/http-status-code.html" rel="alternate"></link><updated>2016-03-23T21:16:00+08:00</updated><author><name>xueweihan</name></author><id>tag:xueweihan.com,2016-03-23:http-status-code.html</id><summary type="html">&lt;h2&gt;1xx消息&lt;/h2&gt;
+&lt;/ul&gt;</summary><category term="代码高亮"></category></entry><entry><title>HTTP状态码大全（转自wiki）</title><link href="http://www.xueweihan.com/http-status-code.html" rel="alternate"></link><updated>2016-03-23T21:16:00+08:00</updated><author><name>xueweihan</name></author><id>tag:www.xueweihan.com,2016-03-23:http-status-code.html</id><summary type="html">&lt;h2&gt;1xx消息&lt;/h2&gt;
 &lt;p&gt;这一类型的状态码，代表请求已被接受，需要继续处理。这类响应是临时响应，只包含状态行和某些可选的响应头信息，并以空行结束。由于HTTP/1.0协议中没有定义任何1xx状态码，所以除非在某些试验条件下，服务器禁止向此类客户端发送1xx响应。 这些状态码代表的响应都是信息性的，标示客户应该采取的其他行动。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;100 Continue&lt;/strong&gt;&lt;br /&gt;
 客户端应当继续发送请求。这个临时响应是用来通知客户端它的部分请求已经被服务器接收，且仍未被拒绝。客户端应当继续发送请求的剩余部分，或者如果请求已经完成，忽略这个响应。服务器必须在请求完成后向客户端发送一个最终响应。&lt;/p&gt;
@@ -231,7 +231,7 @@
 &lt;p&gt;&lt;strong&gt;509 Bandwidth Limit Exceeded&lt;/strong&gt;&lt;br /&gt;
 服务器达到带宽限制。这不是一个官方的状态码，但是仍被广泛使用。&lt;/p&gt;
 &lt;p&gt;&lt;strong&gt;510 Not Extended&lt;/strong&gt;&lt;br /&gt;
-获取资源所需要的策略并没有被满足。&lt;/p&gt;</summary><category term="http"></category><category term="web基础"></category></entry><entry><title>Python pip install mysql-connector-python 2.0.1 失败</title><link href="http://xueweihan.com/python-pip-install-mysql-connector-python-fail.html" rel="alternate"></link><updated>2016-03-22T22:16:00+08:00</updated><author><name>xueweihan</name></author><id>tag:xueweihan.com,2016-03-22:python-pip-install-mysql-connector-python-fail.html</id><summary type="html">&lt;h1&gt;Python pip install mysql-connector-python 2.0.1 失败&lt;/h1&gt;
+获取资源所需要的策略并没有被满足。&lt;/p&gt;</summary><category term="http"></category><category term="web基础"></category></entry><entry><title>Python pip install mysql-connector-python 2.0.1 失败</title><link href="http://www.xueweihan.com/python-pip-install-mysql-connector-python-fail.html" rel="alternate"></link><updated>2016-03-22T22:16:00+08:00</updated><author><name>xueweihan</name></author><id>tag:www.xueweihan.com,2016-03-22:python-pip-install-mysql-connector-python-fail.html</id><summary type="html">&lt;h1&gt;Python pip install mysql-connector-python 2.0.1 失败&lt;/h1&gt;
 &lt;p&gt;如图：&lt;/p&gt;
 &lt;p&gt;&lt;img alt="错误展示" src="http://7xqirw.com1.z0.glb.clouddn.com/759200-20160119121143078-554548811.png" /&gt;&lt;/p&gt;
 &lt;p&gt;尝试了：pip install mysql-connector-python==2.0.1错误依旧&lt;/p&gt;
@@ -246,7 +246,7 @@ python setup.py install
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;参照:&lt;a href="http://stackoverflow.com/questions/27394426/python-pip-install-mysql-connector-python-2-0-1-fails"&gt;stackoverflow&lt;/a&gt;&lt;/p&gt;</summary><category term="python"></category><category term="mysql-connector-python"></category></entry><entry><title>Python抽象方法实现</title><link href="http://xueweihan.com/python-abstract-method.html" rel="alternate"></link><updated>2016-03-21T22:16:00+08:00</updated><author><name>xueweihan</name></author><id>tag:xueweihan.com,2016-03-21:python-abstract-method.html</id><summary type="html">&lt;h2&gt;抽象方法&lt;/h2&gt;
+&lt;p&gt;参照:&lt;a href="http://stackoverflow.com/questions/27394426/python-pip-install-mysql-connector-python-2-0-1-fails"&gt;stackoverflow&lt;/a&gt;&lt;/p&gt;</summary><category term="python"></category><category term="mysql-connector-python"></category></entry><entry><title>Python抽象方法实现</title><link href="http://www.xueweihan.com/python-abstract-method.html" rel="alternate"></link><updated>2016-03-21T22:16:00+08:00</updated><author><name>xueweihan</name></author><id>tag:www.xueweihan.com,2016-03-21:python-abstract-method.html</id><summary type="html">&lt;h2&gt;抽象方法&lt;/h2&gt;
 &lt;p&gt;我的理解抽象方法就是：父类的一个方法，继承的所有子类都必须要实现这个方法，否则报错。&lt;/p&gt;
 &lt;h2&gt;举例说明&lt;/h2&gt;
 &lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;&lt;span class="k"&gt;class&lt;/span&gt; &lt;span class="nc"&gt;Base&lt;/span&gt;&lt;span class="p"&gt;(&lt;/span&gt;&lt;span class="nb"&gt;object&lt;/span&gt;&lt;span class="p"&gt;):&lt;/span&gt;
@@ -271,7 +271,7 @@ python setup.py install
 &lt;/pre&gt;&lt;/div&gt;
 
 
-&lt;p&gt;父类通过定义&lt;code&gt;__metaclass__ = abc.ABCMeta&lt;/code&gt;，然后通过&lt;code&gt;@abc.abstractmethod&lt;/code&gt;装饰器修饰的方法，就变成了抽象方法了。如果子类不实现就会报错。&lt;/p&gt;</summary><category term="python"></category><category term="抽象方法"></category></entry><entry><title>Python内建方法学习笔记</title><link href="http://xueweihan.com/python-build-in-func.html" rel="alternate"></link><updated>2016-03-19T22:01:00+08:00</updated><author><name>xueweihan</name></author><id>tag:xueweihan.com,2016-03-19:python-build-in-func.html</id><summary type="html">&lt;h1&gt;撸一遍python的内建方法&lt;/h1&gt;
+&lt;p&gt;父类通过定义&lt;code&gt;__metaclass__ = abc.ABCMeta&lt;/code&gt;，然后通过&lt;code&gt;@abc.abstractmethod&lt;/code&gt;装饰器修饰的方法，就变成了抽象方法了。如果子类不实现就会报错。&lt;/p&gt;</summary><category term="python"></category><category term="抽象方法"></category></entry><entry><title>Python内建方法学习笔记</title><link href="http://www.xueweihan.com/python-build-in-func.html" rel="alternate"></link><updated>2016-03-19T22:01:00+08:00</updated><author><name>xueweihan</name></author><id>tag:www.xueweihan.com,2016-03-19:python-build-in-func.html</id><summary type="html">&lt;h1&gt;撸一遍python的内建方法&lt;/h1&gt;
 &lt;p&gt;这样做的好处就是：我如果要完成一个功能的时候，如果能用内建方法完成，就用内建方法。这样可以提高效率，同时使自己的代码更加优雅。哎呦？那岂不是撸完就是python高手了？我先帮大家试试效果，请静候我的反馈！&lt;/p&gt;
 &lt;p&gt;反馈：内建方法全部看完了，并敲完所有的内建方法，收获还是有的，但是发现不了解的知识更多了。内建方法属于python的标准库中的一章。python的标准库中还有很多值得一看的章节。&lt;a href="http://python.usyiyi.cn/python_278/library/index.html"&gt;python2.7.8中文标准库文档&lt;/a&gt;，这些内容我粗略的看了一遍。这个内建方法的学习笔记我周三就写完了，本来想在写内建类型的学习笔记。但是发现太多了！而且我发现，看的太多记下的东西就会变少，所以我打算把重心转移到我自己练手的项目中（现在还没什么值得分享的东西，等拿得出手肯定会告诉大家的）。我想把学习标准库中收获的技巧用到我的项目中，这样学以致用才能真正融汇贯通。这就是我的下一步学习计划：通过实际项目，运用python标准库中的技巧！&lt;/p&gt;
 &lt;p&gt;结论就是：看完标准库我还没有成为高手，但是我收获了很多知识，基础牢固了一些。下一步打算在我自己的项目中运用这些技巧，提高自己的能力和技术！&lt;/p&gt;
@@ -1002,7 +1002,7 @@ buffering: 缓冲&lt;/p&gt;
 
 &lt;p&gt;&lt;span id="_import_"&gt;&lt;/span&gt;&lt;/p&gt;
 &lt;h3&gt;__import__()&lt;/h3&gt;
-&lt;p&gt;这种高级引入模块的方法，不常用，所以pass&lt;/p&gt;</summary><category term="python"></category><category term="基础"></category></entry><entry><title>什么是真正的程序员</title><link href="http://xueweihan.com/the-real-programer.html" rel="alternate"></link><updated>2016-02-29T18:01:00+08:00</updated><author><name>xueweihan</name></author><id>tag:xueweihan.com,2016-02-29:the-real-programer.html</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;这种高级引入模块的方法，不常用，所以pass&lt;/p&gt;</summary><category term="python"></category><category term="基础"></category></entry><entry><title>什么是真正的程序员</title><link href="http://www.xueweihan.com/the-real-programer.html" rel="alternate"></link><updated>2016-02-29T18:01:00+08:00</updated><author><name>xueweihan</name></author><id>tag:www.xueweihan.com,2016-02-29:the-real-programer.html</id><summary type="html">&lt;blockquote&gt;
 &lt;p&gt;这篇文章的原文来自：&lt;a href="http://ferd.ca/the-little-printf.html"&gt;A Little Printf Story&lt;/a&gt;&lt;br&gt;作者仿照《小王子》中的情节，通过小printf遇见的不同类型的程序员，最后悟出什么才是真正的程序员！&lt;/p&gt;
 &lt;/blockquote&gt;
 &lt;p&gt;文章略长，但是耐心读完，你肯定会受益良多！&lt;/p&gt;
@@ -1220,7 +1220,7 @@ buffering: 缓冲&lt;/p&gt;
 &lt;h2&gt;参考&lt;/h2&gt;
 &lt;ul&gt;
 &lt;li&gt;&lt;a href="http://codingpy.com/article/the-little-printf-chapter01/"&gt;编程派：这个网站上只翻译到了第五章&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;</summary><category term="程序员"></category><category term="翻译"></category></entry><entry><title>用pelican在Github pages上搭建博客</title><link href="http://xueweihan.com/pelican-build-bolg.html" rel="alternate"></link><updated>2016-02-29T18:00:00+08:00</updated><author><name>xueweihan</name></author><id>tag:xueweihan.com,2016-02-29:pelican-build-bolg.html</id><summary type="html">&lt;h1&gt;pelican&lt;/h1&gt;
+&lt;/ul&gt;</summary><category term="程序员"></category><category term="翻译"></category></entry><entry><title>用pelican在Github pages上搭建博客</title><link href="http://www.xueweihan.com/pelican-build-bolg.html" rel="alternate"></link><updated>2016-02-29T18:00:00+08:00</updated><author><name>xueweihan</name></author><id>tag:www.xueweihan.com,2016-02-29:pelican-build-bolg.html</id><summary type="html">&lt;h1&gt;pelican&lt;/h1&gt;
 &lt;p&gt;Pelican Static Site Generator, Powered by Python：Pelican是python语言写的静态网站生成器。因为我一直打算用github pages做一个博客，现在已经学会用Hexo在github pages上做博客了。但是我一想：我一个pythoner，干嘛不用python写的静态网站生成器。我想应该是网上教程太少，那我今天就来搞一搞。顺便记录下来，整理出一个教程，希望一切顺利！&lt;/p&gt;
 &lt;hr /&gt;
 &lt;h2&gt;开始&lt;/h2&gt;

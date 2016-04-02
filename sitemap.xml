@@ -4,210 +4,210 @@ xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitem
 xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
-<loc>http://xueweihan.com/</loc>
-<lastmod>2016-04-01T22:39:30-00:00</lastmod>
+<loc>http://www.xueweihan.com/</loc>
+<lastmod>2016-04-02T21:02:24-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://xueweihan.com/archives.html</loc>
-<lastmod>2016-04-01T22:39:30-00:00</lastmod>
+<loc>http://www.xueweihan.com/archives.html</loc>
+<lastmod>2016-04-02T21:02:24-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://xueweihan.com/tags.html</loc>
-<lastmod>2016-04-01T22:39:30-00:00</lastmod>
+<loc>http://www.xueweihan.com/tags.html</loc>
+<lastmod>2016-04-02T21:02:24-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://xueweihan.com/categories.html</loc>
-<lastmod>2016-04-01T22:39:30-00:00</lastmod>
+<loc>http://www.xueweihan.com/categories.html</loc>
+<lastmod>2016-04-02T21:02:24-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://xueweihan.com/pages/my-book-life.html</loc>
-<lastmod>2016-04-01T22:39:30-00:00</lastmod>
+<loc>http://www.xueweihan.com/pages/my-book-life.html</loc>
+<lastmod>2016-04-02T21:02:24-00:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.3</priority>
 </url>
 
 <url>
-<loc>http://xueweihan.com/highlight.html</loc>
+<loc>http://www.xueweihan.com/highlight.html</loc>
 <lastmod>2016-04-01T21:46:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://xueweihan.com/lazy.html</loc>
+<loc>http://www.xueweihan.com/lazy.html</loc>
 <lastmod>2016-03-24T18:51:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://xueweihan.com/http-status-code.html</loc>
+<loc>http://www.xueweihan.com/http-status-code.html</loc>
 <lastmod>2016-03-23T21:16:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://xueweihan.com/python-pip-install-mysql-connector-python-fail.html</loc>
+<loc>http://www.xueweihan.com/python-pip-install-mysql-connector-python-fail.html</loc>
 <lastmod>2016-03-22T22:16:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://xueweihan.com/python-abstract-method.html</loc>
+<loc>http://www.xueweihan.com/python-abstract-method.html</loc>
 <lastmod>2016-03-21T22:16:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://xueweihan.com/python-build-in-func.html</loc>
+<loc>http://www.xueweihan.com/python-build-in-func.html</loc>
 <lastmod>2016-03-19T22:01:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://xueweihan.com/the-real-programer.html</loc>
+<loc>http://www.xueweihan.com/the-real-programer.html</loc>
 <lastmod>2016-02-29T18:01:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://xueweihan.com/pelican-build-bolg.html</loc>
+<loc>http://www.xueweihan.com/pelican-build-bolg.html</loc>
 <lastmod>2016-02-29T18:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://xueweihan.com/helloworld.html</loc>
+<loc>http://www.xueweihan.com/helloworld.html</loc>
 <lastmod>2016-02-28T00:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
 
 <url>
-<loc>http://xueweihan.com/category/bian-cheng.html</loc>
+<loc>http://www.xueweihan.com/category/bian-cheng.html</loc>
 <lastmod>2016-04-01T21:46:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://xueweihan.com/category/ri-ji.html</loc>
+<loc>http://www.xueweihan.com/category/ri-ji.html</loc>
 <lastmod>2016-03-24T18:51:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://xueweihan.com/tag/webji-chu.html</loc>
+<loc>http://www.xueweihan.com/tag/webji-chu.html</loc>
 <lastmod>2016-03-23T21:16:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://xueweihan.com/tag/lan.html</loc>
+<loc>http://www.xueweihan.com/tag/lan.html</loc>
 <lastmod>2016-03-24T18:51:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://xueweihan.com/tag/http.html</loc>
+<loc>http://www.xueweihan.com/tag/http.html</loc>
 <lastmod>2016-03-23T21:16:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://xueweihan.com/tag/pelican.html</loc>
+<loc>http://www.xueweihan.com/tag/pelican.html</loc>
 <lastmod>2016-02-29T18:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://xueweihan.com/tag/python.html</loc>
+<loc>http://www.xueweihan.com/tag/python.html</loc>
 <lastmod>2016-03-22T22:16:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://xueweihan.com/tag/fan-yi.html</loc>
+<loc>http://www.xueweihan.com/tag/fan-yi.html</loc>
 <lastmod>2016-02-29T18:01:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://xueweihan.com/tag/dai-ma-gao-liang.html</loc>
+<loc>http://www.xueweihan.com/tag/dai-ma-gao-liang.html</loc>
 <lastmod>2016-04-01T21:46:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://xueweihan.com/tag/github-pages.html</loc>
+<loc>http://www.xueweihan.com/tag/github-pages.html</loc>
 <lastmod>2016-02-29T18:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://xueweihan.com/tag/cheng-xu-yuan.html</loc>
+<loc>http://www.xueweihan.com/tag/cheng-xu-yuan.html</loc>
 <lastmod>2016-02-29T18:01:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://xueweihan.com/tag/ji-chu.html</loc>
+<loc>http://www.xueweihan.com/tag/ji-chu.html</loc>
 <lastmod>2016-03-19T22:01:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://xueweihan.com/tag/mysql-connector-python.html</loc>
+<loc>http://www.xueweihan.com/tag/mysql-connector-python.html</loc>
 <lastmod>2016-03-22T22:16:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://xueweihan.com/tag/bo-ke.html</loc>
+<loc>http://www.xueweihan.com/tag/bo-ke.html</loc>
 <lastmod>2016-02-29T18:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://xueweihan.com/tag/chou-xiang-fang-fa.html</loc>
+<loc>http://www.xueweihan.com/tag/chou-xiang-fang-fa.html</loc>
 <lastmod>2016-03-21T22:16:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
-<loc>http://xueweihan.com/author/xueweihan.html</loc>
+<loc>http://www.xueweihan.com/author/xueweihan.html</loc>
 <lastmod>2016-04-01T21:46:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
