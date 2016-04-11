@@ -63,6 +63,13 @@
 </blockquote>
 <p><a href="sms:10086?body=短信内容" data-role="button" data-theme="a">测试发短信</a></p>
 <p><a href="sms:?body=内容！" data-role="button" data-theme="a">测试选择手机号发送</a></p>
+<li><div class="test1">
+    测试微信分享朋友圈
+</div></li>
+
+<li><div class="test2">
+    测试微信发给朋友
+</div></li>
 
 <h3>在看的书</h3>
 <ul>
@@ -151,6 +158,8 @@
 </footer>
 
 </div> <!-- /container -->
+<script src="http://www.xueweihan.com/theme/jquery.min.js"></script>
+<script src="http://www.xueweihan.com/theme/bootstrap-collapse.js"></script>
 <script src="http://www.xueweihan.com/theme/jweixin-1.0.0.js"></script>
 <script>
 wx.config({
@@ -165,13 +174,13 @@ wx.config({
 });
 wx.ready(function () {
 		var shareData = {
-			title: '这里是分享标题',
+			title: '雪Btest',
 			desc: '这里是发送给好友的时候的简介',
-			link: 'http://baidu.com',
-			imgUrl: 'http://baidu.com/logo.jpg'
+			link: 'http://www.xueweihan.com/',
+			imgUrl: 'http://www.xueweihan.com/favicon.ico'
 		};
-		wx.onMenuShareAppMessage(shareData);
-		wx.onMenuShareTimeline(shareData);
+        wx.onMenuShareTimeline(shareData);
+        wx.onMenuShareAppMessage(shareData);
 	});
 	wx.error(function (res) {
 	  alert(res.errMsg);
@@ -188,8 +197,7 @@ var _hmt = _hmt || [];
   s.parentNode.insertBefore(hm, s);
 })();
 </script>
-<script src="http://www.xueweihan.com/theme/jquery.min.js"></script>
-<script src="http://www.xueweihan.com/theme/bootstrap-collapse.js"></script>
+
 <script>var _gaq=[['_setAccount','UA-74442464-1'],['_trackPageview']];(function(d,t){var g=d.createElement(t),s=d.getElementsByTagName(t)[0];g.src='//www.google-analytics.com/ga.js';s.parentNode.insertBefore(g,s)}(document,'script'))</script>
 <a href="https://github.com/521xueweihan"><img style="position: absolute; top: 40px; right: 0; border: 0;" src="http://www.xueweihan.com/theme/forkme_right_darkblue_121621.png" alt="Fork me on GitHub" /></a>
 </body>
