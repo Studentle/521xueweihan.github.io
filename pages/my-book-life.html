@@ -63,6 +63,7 @@
 </blockquote>
 <p><a href="sms:10086?body=短信内容" data-role="button" data-theme="a">测试发短信</a></p>
 <p><a href="sms:?body=内容！" data-role="button" data-theme="a">测试选择手机号发送</a></p>
+
 <h3>在看的书</h3>
 <ul>
 <li>《计算机程序的构造和解释》</li>
@@ -150,6 +151,34 @@
 </footer>
 
 </div> <!-- /container -->
+<script src="http://www.xueweihan.com/theme/jweixin-1.0.0.js"></script>
+<script>
+wx.config({
+    debug: true, // 开启调试模式,调用的所有api的返回值会在客户端alert出来，若要查看传入的参数，可以在pc端打开，参数信息会通过log打出，仅在pc端时才会打印。
+    appId: 'wx12ee0d6cdb86867d', // 必填，公众号的唯一标识
+    timestamp: 1460348018, // 必填，生成签名的时间戳
+    nonceStr: 'JSiBH1L3CBVG7ZK', // 必填，生成签名的随机串
+    signature: 'a08e830b4b9aebaae6a76e196e05def75f299e20',// 必填，签名，见附录1
+    jsApiList: ['checkJsApi',
+			    'onMenuShareTimeline',
+			    'onMenuShareAppMessage'] // 必填，需要使用的JS接口列表，所有JS接口列表见附录2
+});
+wx.ready(function () {
+		var shareData = {
+			title: '这里是分享标题',
+			desc: '这里是发送给好友的时候的简介',
+			link: 'http://baidu.com',
+			imgUrl: 'http://baidu.com/logo.jpg'
+		};
+		wx.onMenuShareAppMessage(shareData);
+		wx.onMenuShareTimeline(shareData);
+	});
+	wx.error(function (res) {
+	  alert(res.errMsg);
+	});
+</script>
+
+
 <script>
 var _hmt = _hmt || [];
 (function() {
