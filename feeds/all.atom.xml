@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>削微寒</title><link href="http://www.xueweihan.com/" rel="alternate"></link><link href="http://www.xueweihan.com/feeds/all.atom.xml" rel="self"></link><id>http://www.xueweihan.com/</id><updated>2016-05-20T00:00:00+08:00</updated><entry><title>写博客满一年了</title><link href="http://www.xueweihan.com/one-year.html" rel="alternate"></link><published>2016-05-20T00:00:00+08:00</published><author><name>xueweihan</name></author><id>tag:www.xueweihan.com,2016-05-20:one-year.html</id><summary type="html">&lt;h2&gt;前言&lt;/h2&gt;
-&lt;p&gt;以后我打算在写一些自己的日记，在&lt;a href="http://www.cnblogs.com/xueweihan/"&gt;博客园&lt;/a&gt;写技术类的文章。在博客园写博客，到今天已经满一年整了，也是我走上编程道路的一年。这一年里，我开始学编程，从大学毕业，工作，写博客。转眼也一年了，打算写个总结，总结下这个期间的经历和收获。&lt;/p&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>削微寒</title><link href="http://www.xueweihan.com/" rel="alternate"></link><link href="http://www.xueweihan.com/feeds/all.atom.xml" rel="self"></link><id>http://www.xueweihan.com/</id><updated>2016-05-20T00:00:00+08:00</updated><entry><title>写了一年的博客</title><link href="http://www.xueweihan.com/one-year.html" rel="alternate"></link><published>2016-05-20T00:00:00+08:00</published><author><name>xueweihan</name></author><id>tag:www.xueweihan.com,2016-05-20:one-year.html</id><summary type="html">&lt;h2&gt;前言&lt;/h2&gt;
+&lt;p&gt;以后在这里我打算在写一些日记和生活感悟的东西，在&lt;a href="http://www.cnblogs.com/xueweihan/"&gt;博客园&lt;/a&gt;写技术类的文章。&lt;/p&gt;
+&lt;p&gt;到今天为止，我在博客园写博客，已经满一年了，这一年也是我走上编程道路的一年。这一年里，我开始学编程，从大学毕业，工作，写博客。转眼也一年了，打算写个总结，总结下这个期间的经历和收获。&lt;/p&gt;
 &lt;p&gt;&lt;img alt="" src="http://7xqirw.com1.z0.glb.clouddn.com/1.png" /&gt;&lt;/p&gt;
 &lt;p&gt;现在，打开编辑器，看着闪动着的光标，思绪就回到一年前，大四时候的时候。&lt;/p&gt;
 &lt;h2&gt;万事开头难&lt;/h2&gt;
