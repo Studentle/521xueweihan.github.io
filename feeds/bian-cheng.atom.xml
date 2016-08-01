@@ -20,7 +20,7 @@
 &lt;p&gt;最后一点，就是告诫自己不要急，我是个急性子。但是，罗马不是一天建成的，东西是一点点完善。而且，接手过来的代码肯定是一步步的拿下，边改边掌握，最后重写。上来就重写的可能性，太小。主要是需要先熟悉业务流程，才能完成重写。&lt;/p&gt;
 &lt;p&gt;最后，完成整个的过程，能力的提升是一方面，更多的是对整个核心业务流程的掌握，原来我都是写一些边缘的功能。这次也是对我很好的一次锻炼，我一定要抓住这次机会，努力提高自己。&lt;/p&gt;
 &lt;h2&gt;后记&lt;/h2&gt;
-&lt;p&gt;等我成功的重构完，接手过来的项目后，再来补充吧！&lt;/p&gt;</summary><category term="收获"></category></entry><entry><title>使用highlight实现代码高亮</title><link href="http://www.xueweihan.com/highlight.html" rel="alternate"></link><published>2016-04-01T21:46:00+08:00</published><author><name>xueweihan</name></author><id>tag:www.xueweihan.com,2016-04-01:highlight.html</id><summary type="html">&lt;h2&gt;步骤&lt;/h2&gt;
+&lt;p&gt;这个项目做完第一期后，我就离职了。现在在新的工作单位，接触新的技术，比以前忙太多了。比较想念原来的同事，会哥，涂老大，伟洁。哎，人生路都是自己的选择，哭着也要走完！&lt;/p&gt;</summary><category term="收获"></category></entry><entry><title>使用highlight实现代码高亮</title><link href="http://www.xueweihan.com/highlight.html" rel="alternate"></link><published>2016-04-01T21:46:00+08:00</published><author><name>xueweihan</name></author><id>tag:www.xueweihan.com,2016-04-01:highlight.html</id><summary type="html">&lt;h2&gt;步骤&lt;/h2&gt;
 &lt;ol&gt;
 &lt;li&gt;去官网下载：https://highlightjs.org/&lt;/li&gt;
 &lt;li&gt;在页面上引入，样式css和highlight.js静态文件&lt;/li&gt;
