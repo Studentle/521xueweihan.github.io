@@ -1,5 +1,27 @@
 <?xml version="1.0" encoding="utf-8"?>
-<feed xmlns="http://www.w3.org/2005/Atom"><title>削微寒</title><link href="http://www.xueweihan.com/" rel="alternate"></link><link href="http://www.xueweihan.com/feeds/bian-cheng.atom.xml" rel="self"></link><id>http://www.xueweihan.com/</id><updated>2016-06-04T18:01:00+08:00</updated><entry><title>乌云背后的阳光</title><link href="http://www.xueweihan.com/the-others-bab-code.html" rel="alternate"></link><published>2016-06-04T18:01:00+08:00</published><author><name>xueweihan</name></author><id>tag:www.xueweihan.com,2016-06-04:the-others-bab-code.html</id><summary type="html">&lt;h1&gt;乌云背后的阳光&lt;/h1&gt;
+<feed xmlns="http://www.w3.org/2005/Atom"><title>削微寒</title><link href="http://www.xueweihan.com/" rel="alternate"></link><link href="http://www.xueweihan.com/feeds/bian-cheng.atom.xml" rel="self"></link><id>http://www.xueweihan.com/</id><updated>2016-09-11T22:01:00+08:00</updated><entry><title>量化目标</title><link href="http://www.xueweihan.com/goal.html" rel="alternate"></link><published>2016-09-11T22:01:00+08:00</published><author><name>xueweihan</name></author><id>tag:www.xueweihan.com,2016-09-11:goal.html</id><summary type="html">&lt;h3&gt;目前状态&lt;/h3&gt;
+&lt;p&gt;最近总是感觉自己的产出很少，东一榔头，西一棒子。无法专注的做些事情，总想把所有的事情搞好，最后发现时间都被自己的浪费掉了。同时感觉很累，一天到晚马不停蹄，最后忙完一天发现没有什么产出。为什么会这样？&lt;/p&gt;
+&lt;p&gt;我感觉，我的累主要是因为：&lt;strong&gt;劳无所获。&lt;/strong&gt;&lt;/p&gt;
+&lt;p&gt;我最喜欢的状态是：努力——成果——满血——努力——成功，如此反复循环。这种状态下我就不会觉得累，目前自己做的东西，总是感觉做完没什么即视的成功，让我感觉‘遥遥无期’，毫无斗志。&lt;/p&gt;
+&lt;h3&gt;自我反思&lt;/h3&gt;
+&lt;p&gt;如果说编程语言入门简单，在我看来是：按照例子输入代码，返回预期的结果，良性循环，会很快入门。而学习编程过程中，半途而废的情况，大多数是卡在一个地方：一个知识点弄不懂、一个bug解决不了、我没有做错啊，为什会出现这种情况？是啊，如果一切可以按部就班，只是按照着输入就能够成为优秀的程序，那么身体健全，有小学教育水平的都能够成为优秀的程序员，那么好的程序员需求量也不会‘供不应求’了。&lt;/p&gt;
+&lt;p&gt;‘如果遇到的问题，那么这就是你走向提高一个机会’，我自己来说，我掌握了解决问题的方法：分解问题、学会提问、善用google。使用以上几点，问题就会迎刃而解，然后我又回到了那个‘愉快编程’的程序员了。但是现在我遇到的问题，或者所处的阶段，不是一次性就能解决的。问题接着问题，困难接着困难——我好像不能在用以前的心态（注意这里是心态，不是方法）来解决目前的困境，我需要调整心态。&lt;/p&gt;
+&lt;h3&gt;正视自己&lt;/h3&gt;
+&lt;p&gt;一本七百页的英文原版书，我想一次性看完、吃透？打算用一个星期、一个月、三个月？这个时间定的不切实际，从而打击了我的自信和激情。因为，我自己定的时间是站在我这个水平定下的，我不是站在高一级层面俯视，我现在所处层面。为什么老师留作业、上司定任务？&lt;/p&gt;
+&lt;p&gt;如果我给自己定下了‘不切实际’的目标，我就可能完不成，我已经很努力但是没有达到目标，也就阻塞在了成果的前面。从而阻塞了这个自我激励的良性循环，让我身心匹配，开始怀疑人生了😄&lt;/p&gt;
+&lt;p&gt;这或许就是进阶的难处，所以我需要：调整心态，正视自己的能力，不断试错，允许犯错，&lt;strong&gt;循序渐进&lt;/strong&gt;。一切从头开始，从新积累自信，这次的自信是在自我否定中建立起来的。逐步正视自己的能力，才能正视收获，重新看到自己的成果，恢复良性的自我激励循环。&lt;/p&gt;
+&lt;h3&gt;量化目标&lt;/h3&gt;
+&lt;p&gt;动态规划目标，一段时间做一件事情，要耐得住寂寞。因为现在能让我有成就感的成功，不是几天就可以做到的。所以，完成一件事情，会分成很多个小的目标，而小的目标还需要具体的量化：&lt;/p&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span&gt;&lt;/span&gt;bad:用一个月时间读完《图解TCP/IP》
+good:每天看是20页
+great:每天起床后40min，看完20页
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;我觉得这样会好一些，量化的目标——事儿、量、点儿&lt;/p&gt;
+&lt;h3&gt;最后&lt;/h3&gt;
+&lt;p&gt;坚持、专注、自信，不是盲目的自信，要知道现在要做的事正是我走向优秀的里程碑，没有随便的成功。过程必然是痛苦、寂寞的。&lt;/p&gt;
+&lt;p&gt;希望有所好转，搞它！TMD！&lt;/p&gt;</summary><category term="感悟"></category></entry><entry><title>乌云背后的阳光</title><link href="http://www.xueweihan.com/the-others-bab-code.html" rel="alternate"></link><published>2016-06-04T18:01:00+08:00</published><author><name>xueweihan</name></author><id>tag:www.xueweihan.com,2016-06-04:the-others-bab-code.html</id><summary type="html">&lt;h1&gt;乌云背后的阳光&lt;/h1&gt;
 &lt;p&gt;如果我没记错的话，这是一部电影的名字。主要讲的是：&lt;/p&gt;
 &lt;blockquote&gt;
 &lt;p&gt;不论生活再怎么不堪，但还是会有好的事情发生。&lt;/p&gt;
